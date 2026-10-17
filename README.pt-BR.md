@@ -2,6 +2,8 @@
 
 🇬🇧 English version: [README.md](README.md)
 
+**Como citar:** Capucho WF (2026) Kinetic model of microRNA mimics in Alzheimer's disease and Parkinson's disease: data, code and results, versão 1.0.0. Zenodo. https://doi.org/10.5281/zenodo.23441513 (DOI desta versão; o DOI que representa todas as versões é 10.5281/zenodo.23441512).
+
 Este repositório guarda os dados, scripts, tabelas e figuras de um estudo cinético de miméticos de microRNA (miRNA) para dois eixos: miR-29, BACE1 e Aβ42 na doença de Alzheimer (DA), e miR-7 e α-sinucleína na doença de Parkinson (DP). Não contém texto de manuscrito. Todo número que um manuscrito cita é lido de uma tabela de resultados por um script, e o `scripts/08_verify_consistency.py` recalcula os números derivados a partir das fontes.
 
 ## O que contém
