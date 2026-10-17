@@ -31,6 +31,7 @@ import math
 import re
 import sys
 from collections import Counter
+from decimal import Decimal, ROUND_HALF_UP
 
 KINETICS = "data/extracted/kinetic_parameters.csv"
 SCHWANHAUSSER = "data/raw/kinetics_2026/schwanhausser_2011_supplementary_table.xls"
@@ -990,6 +991,21 @@ def main():
             check(f_["species"] == [max(half_, key=half_.get)], f"series ranking: the featured series of {axis_} is {f_['species']}, the most stable measured species is {max(half_, key=half_.get)}")
         check(rank_json["reference_at_least_as_long_as_first_place"]["of"] == len(by_group) - sum(1 for k_ in by_group if not any(r_["reference"] == "True" for r_ in by_group[k_])),
               "series ranking: the count of reference comparisons does not match the groups")
+        # EN/PT: the combinations with a single first place and the rounding of the intervals quoted in the text | combinacoes com um so primeiro lugar e o arredondamento dos intervalos citados no texto
+        single_ = sum(1 for k_, g_ in by_group.items()
+                      if sum(1 for r_ in g_ if r_["reference"] == "False" and r_["rank_among_studied"] == "1") == 1)
+        nums_ = json.load(open("results/tables/manuscript2_numbers.json", encoding="utf-8"))
+        nums_ = nums_.get("values", nums_)
+        check(int(nums_["rank.combos_single"]) == single_ and int(nums_["rank.combos"]) - int(nums_["rank.ties"]) == single_,
+              f"series ranking: {single_} combinations have a single first place; the numbers file says {nums_['rank.combos_single']}")
+        def near_(x_):
+            return str(int(Decimal(repr(round(x_, 8))).quantize(Decimal(1), rounding=ROUND_HALF_UP))) if x_ >= 10 else str(Decimal(repr(round(x_, 8))).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+        for tok_, ax_, sp_, kd_ in (("ds.AD.c.ad.i10_rng", "AD", "miR-29c", "0.2921"), ("ds.AD.b.ad.i10_rng", "AD", "miR-29b", "0.2921"),
+                                    ("ds.PD.m7ub.a.i10_rng", "PD", "miR-7 upper bound", "0.3"), ("ds.PD.m7.a.i10_rng", "PD", "miR-7", "0.3")):
+            v_ = [float(r_["interval_h"]) for r_ in rank_rows if r_["axis"] == ax_ and r_["species"] == sp_ and r_["threshold_x"] == "10"
+                  and abs(float(r_["target_knockdown"]) - float(kd_)) < 1e-3 and r_["anchor"] != "K065 floor"]
+            want_ = near_(min(v_)) if near_(min(v_)) == near_(max(v_)) else f"{near_(min(v_))} to {near_(max(v_))}"
+            check(nums_[tok_] == want_, f"series ranking: the text quotes {nums_[tok_]} h for {sp_} ({ax_}) at 10 times; the table gives {want_} h, rounded to the nearest")
     except FileNotFoundError:
         claim(False, "results/tables/mimic_series_ranking.json missing; run scripts/46 after scripts/40")
 

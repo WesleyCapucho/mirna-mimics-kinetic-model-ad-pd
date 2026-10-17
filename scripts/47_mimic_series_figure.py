@@ -67,7 +67,7 @@ from _bilingual import LANGS, t as tr, fig_path
 
 FIG, TAB, MM, DPI = m38.FIG, m38.TAB, m38.MM, m38.DPI
 STEM = "mech_series_ranking"
-FW, FH = 174.0, 168.0
+FW, FH = 174.0, 180.0
 THR = (3, 10, 30)
 HALO = [pe.withStroke(linewidth=2.2, foreground="white")]
 STYLE = {   # species -> (line style, label EN, label PT)
@@ -114,12 +114,12 @@ def draw(d, rank, lang):
     cases = ds["interval_within_threshold"]
     kap_ad = d["ode"]["mimic_dose_vs_measured_knockdown"]["required_BACE1_knockdown"]
     kap_a, kap_b = m38.kv(d, "K058"), m38.kv(d, "K063")
-    cols = [("AD", kap_ad, tr(lang, f"Alzheimer's disease · fall required {100 * kap_ad:.1f}%", f"Alzheimer · queda exigida {100 * kap_ad:.1f}%"), ["miR-29b", "miR-29c", "median miRNA"]),
-            ("PD", kap_a, tr(lang, f"Parkinson's disease · fall {100 * kap_a:.0f}% (K058)", f"Parkinson · queda {100 * kap_a:.0f}% (K058)"), ["miR-7", "miR-7 upper bound", "median miRNA"]),
-            ("PD", kap_b, tr(lang, f"Parkinson's disease · fall {100 * kap_b:.0f}% (K063)", f"Parkinson · queda {100 * kap_b:.0f}% (K063)"), ["miR-7", "miR-7 upper bound", "median miRNA"])]
+    cols = [("AD", kap_ad, tr(lang, f"Fall required: {100 * kap_ad:.1f}%", f"Queda exigida: {100 * kap_ad:.1f}%"), ["miR-29b", "miR-29c", "median miRNA"]),
+            ("PD", kap_a, tr(lang, f"Fall {100 * kap_a:.0f}%: miR-7", f"Queda {100 * kap_a:.0f}%: miR-7"), ["miR-7", "miR-7 upper bound", "median miRNA"]),
+            ("PD", kap_b, tr(lang, f"Fall {100 * kap_b:.0f}%: miR-7 + miR-153", f"Queda {100 * kap_b:.0f}%: miR-7 + miR-153"), ["miR-7", "miR-7 upper bound", "median miRNA"])]
     fig = plt.figure(figsize=(FW * MM, FH * MM))
-    gs_f = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.745, bottom=0.470, wspace=0.30)
-    gs_d = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.352, bottom=0.150, wspace=0.30)
+    gs_f = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.655, bottom=0.415, wspace=0.30)
+    gs_d = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.318, bottom=0.145, wspace=0.30)
     xt = [0.01, 1, 100, 10000]
     for k, (axis, kd, title, order) in enumerate(cols):
         feat = rank["featured_by_axis"][axis]["species"][0]
@@ -141,7 +141,7 @@ def draw(d, rank, lang):
             ax.axvline(rho, color=vs.RULE, lw=0.7, ls=(0, (1.5, 2.0)), zorder=1)
         if floor_key in cases:
             ax.axvline(cases[floor_key]["rho"], color=vs.INK, lw=0.9, zorder=1)
-            ax.text(cases[floor_key]["rho"] * 1.12, 1.55, tr(lang, "K065 floor", "piso K065"), fontsize=6.5, color=vs.INK2, va="bottom", ha="left", rotation=90)
+            ax.text(cases[floor_key]["rho"] * 1.12, 1.55, tr(lang, "floor on ρ", "piso de ρ"), fontsize=6.5, color=vs.INK2, va="bottom", ha="left", rotation=90)
         ends = []
         for sp in order:
             Ts, rhos, P = series_matrix(d, axis, sp, kd)
@@ -171,11 +171,11 @@ def draw(d, rank, lang):
             lab = (STYLE[sp][1] if lang == "en" else STYLE[sp][2]).replace(", reference", "").replace(", referência", "")
             ax.text(9000, yy, lab, fontsize=6.3, color=text_colour(axis, sp), va="bottom" if above else "top", ha="right",
                     fontweight="bold" if sp == feat else "normal", path_effects=HALO, zorder=8)
-        ax.set_title(title, fontsize=7.4, fontweight="bold", color=vs.DISEASE_TEXT[axis], loc="left", pad=6)
+        ax.set_title(title, fontsize=7.2, color=vs.INK2, loc="left", pad=6)
         ax.set_xlabel(tr(lang, "ρ, miRNA-driven over intrinsic mRNA decay", "ρ, decaimento por miRNA sobre o intrínseco"), fontsize=6.8, color=vs.INK2, labelpad=2)
         if k == 0:
             ax.set_ylabel(tr(lang, "Longest dosing interval within 10× (h)", "Maior intervalo de dose dentro de 10× (h)"), fontsize=6.8, color=vs.INK2, labelpad=2)
-        m38.label_panel(ax, "abc"[k], x=-0.20 if k == 0 else -0.15, y=1.10)
+        m38.label_panel(ax, "abc"[k], x=-0.20 if k == 0 else -0.15, y=1.12)
         # ---------------------------------------------------------------- row 3: anchors and thresholds
         bx = fig.add_subplot(gs_d[0, k])
         bx.set_xscale("log"); bx.set_xlim(1.0, 260); bx.set_ylim(-0.7, len(order) - 0.3)
@@ -201,21 +201,28 @@ def draw(d, rank, lang):
             val_txt = f"{mid:.0f} h" if mid < 167.5 else "≥168 h"
             bx.text(1.06, y + 0.30, f"{lab}: {val_txt}", fontsize=6.4, color=text_colour(axis, sp), va="bottom", ha="left",
                     fontweight="bold" if sp == feat else "normal")
-        bx.set_xlabel(tr(lang, "Longest dosing interval within 10× (h)", "Maior intervalo de dose dentro de 10× (h)"), fontsize=6.8, color=vs.INK2, labelpad=2)
+        bx.set_xlabel(tr(lang, "Longest interval within 10× (h, log scale)", "Maior intervalo dentro de 10× (h, escala log)"), fontsize=6.8, color=vs.INK2, labelpad=2)
         m38.label_panel(bx, "def"[k], x=-0.20 if k == 0 else -0.15, y=1.06)
     # ---------------------------------------------------------------- row 1: renders
-    items = [("a2_bace1_inhibitor", 0.150, 27.0, 25.0, "BACE1 · 4D8C"),
-             ("a2_abeta42_fibril_axis", 0.290, 27.0, 25.0, "Aβ42 fibril · 5OQV"),
-             ("a2_asyn_fibril_axis", 0.725, 44.0, 25.0, "α-synuclein fibril · 6CU7")]
+    items = [("a2_bace1_inhibitor", 0.140, 27.0, 33.0, "BACE1 · 4D8C"),
+             ("a2_abeta42_fibril_axis", 0.275, 27.0, 33.0, "Aβ42 fibril · 5OQV"),
+             ("a2_asyn_fibril_axis", 0.696, 46.0, 33.0, "α-synuclein fibril · 6CU7")]
     for stem, cx, bw, bh, cap in items:
-        vm.place_image_fit(fig, f"{FIG}/structures/{stem}.png", cx, 0.905, bw, bh, FW, FH)
-        fig.text(cx, 0.832, cap, fontsize=6.5, color=vs.NOTE, ha="center", va="center", zorder=10)
+        vm.place_image_fit(fig, f"{FIG}/structures/{stem}.png", cx, 0.853, bw, bh, FW, FH)
+        fig.text(cx, 0.748, cap, fontsize=6.5, color=vs.NOTE, ha="center", va="center", zorder=10)
+    for x0, x1, axis_, lab_ in ((0.082, 0.333, "AD", tr(lang, "Alzheimer's disease", "Doença de Alzheimer")),
+                                (0.378, 0.985, "PD", tr(lang, "Parkinson's disease", "Doença de Parkinson"))):
+        fig.text(x0, 0.982, lab_, fontsize=8.0, fontweight="bold", color=vs.DISEASE_TEXT[axis_], ha="left", va="center")
+        fig.add_artist(Line2D([x0, x1], [0.966, 0.966], color=vs.AD if axis_ == "AD" else vs.PD, lw=1.0, transform=fig.transFigure))
     # ---------------------------------------------------------------- keys
-    ky = 0.070
+    ky = 0.082
     fig.add_artist(Line2D([0.082, 0.112], [ky, ky], color=vs.INK2, lw=2.4, transform=fig.transFigure))
     fig.text(0.119, ky, tr(lang, "first place, primary reading; band: 3× to 30×", "primeiro lugar, leitura primária; faixa: 3× a 30×"), fontsize=6.5, color=vs.INK2, va="center")
     fig.add_artist(Line2D([0.082, 0.112], [ky - 0.022, ky - 0.022], color=vs.INK2, lw=1.15, ls="-", transform=fig.transFigure))
     fig.text(0.119, ky - 0.022, tr(lang, "thin line: other measured series, same rule; dotted: reference of median stability (34 h)", "linha fina: outras séries medidas, mesma regra; pontilhada: referência de estabilidade mediana (34 h)"), fontsize=6.5, color=vs.INK2, va="center")
+    fig.add_artist(Line2D([0.082, 0.112], [ky - 0.044, ky - 0.044], color=vs.INK2, lw=3.2, alpha=0.30, transform=fig.transFigure))
+    fig.text(0.119, ky - 0.044, tr(lang, "lower panels: circle, diamond and square are the low, midpoint and high anchors of ρ; bar, 3× to 30× at the midpoint",
+                                   "painéis inferiores: círculo, losango e quadrado são as âncoras baixa, média e alta de ρ; barra, 3× a 30× no ponto médio"), fontsize=6.5, color=vs.INK2, va="center")
     # EN/PT: no text may leave the page, or the tight box grows past 174 mm | nenhum texto pode sair da pagina
     fig.canvas.draw()
     rend = fig.canvas.get_renderer()

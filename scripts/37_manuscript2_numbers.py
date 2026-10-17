@@ -575,8 +575,8 @@ iw = ds["interval_within_threshold"]
 
 
 def hours_floor(x):
-    """EN/PT: an interval rounded DOWN (one decimal below 10 h, whole hours from 10 h), so that 'up to X h' stays true."""
-    return lower_bound(x)
+    """EN/PT: an interval rounded to the nearest value (one decimal below 10 h, whole hours from 10 h), as in the figures."""
+    return peak(x)
 
 
 for ax_, sp_, kap_, lab_ in (("PD", "miR-7", kap_a, "a"), ("PD", "miR-7 upper bound", kap_a, "a"), ("PD", "median miRNA", kap_a, "a"),
@@ -633,6 +633,7 @@ must(rk["featured_by_axis"]["AD"]["species"] == ["miR-29c"] and rk["featured_by_
      "the featured series are no longer miR-29c in AD and the upper-bound miR-7 in PD")
 integer("rank.combos", sum(rk["featured_by_axis"][a_]["n_combinations"] for a_ in ("AD", "PD")), RNK_J)
 integer("rank.ties", sum(rk["featured_by_axis"][a_]["n_ties_for_first"] for a_ in ("AD", "PD")), RNK_J)
+integer("rank.combos_single", int(N["rank.combos"]) - int(N["rank.ties"]), RNK_J)
 integer("rank.ref_n", rk["reference_at_least_as_long_as_first_place"]["n"], RNK_J)
 integer("rank.ref_of", rk["reference_at_least_as_long_as_first_place"]["of"], RNK_J)
 must(rk["reference_at_least_as_long_as_first_place"]["n"] == rk["reference_at_least_as_long_as_first_place"]["of"],
