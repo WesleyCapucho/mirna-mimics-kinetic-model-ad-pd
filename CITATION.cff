@@ -4,6 +4,8 @@ title: "Kinetic model of microRNA mimics in Alzheimer's disease and Parkinson's 
 type: dataset
 license: CC-BY-4.0
 version: "1.0.0"
+doi: "10.5281/zenodo.23441513"
+date-released: 2026-10-17
 authors:
   - family-names: Capucho
     given-names: Wesley Felipe
