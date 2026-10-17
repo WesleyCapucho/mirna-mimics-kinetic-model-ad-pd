@@ -67,7 +67,7 @@ from _bilingual import LANGS, t as tr, fig_path
 
 FIG, TAB, MM, DPI = m38.FIG, m38.TAB, m38.MM, m38.DPI
 STEM = "mech_series_ranking"
-FW, FH = 174.0, 180.0
+FW, FH = 174.0, 168.0
 THR = (3, 10, 30)
 HALO = [pe.withStroke(linewidth=2.2, foreground="white")]
 STYLE = {   # species -> (line style, label EN, label PT)
@@ -118,8 +118,8 @@ def draw(d, rank, lang):
             ("PD", kap_a, tr(lang, f"Parkinson's disease · fall {100 * kap_a:.0f}% (K058)", f"Parkinson · queda {100 * kap_a:.0f}% (K058)"), ["miR-7", "miR-7 upper bound", "median miRNA"]),
             ("PD", kap_b, tr(lang, f"Parkinson's disease · fall {100 * kap_b:.0f}% (K063)", f"Parkinson · queda {100 * kap_b:.0f}% (K063)"), ["miR-7", "miR-7 upper bound", "median miRNA"])]
     fig = plt.figure(figsize=(FW * MM, FH * MM))
-    gs_f = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.730, bottom=0.452, wspace=0.30)
-    gs_d = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.338, bottom=0.140, wspace=0.30)
+    gs_f = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.745, bottom=0.470, wspace=0.30)
+    gs_d = fig.add_gridspec(1, 3, left=0.082, right=0.985, top=0.352, bottom=0.150, wspace=0.30)
     xt = [0.01, 1, 100, 10000]
     for k, (axis, kd, title, order) in enumerate(cols):
         feat = rank["featured_by_axis"][axis]["species"][0]
@@ -208,22 +208,14 @@ def draw(d, rank, lang):
              ("a2_abeta42_fibril_axis", 0.290, 27.0, 25.0, "Aβ42 fibril · 5OQV"),
              ("a2_asyn_fibril_axis", 0.725, 44.0, 25.0, "α-synuclein fibril · 6CU7")]
     for stem, cx, bw, bh, cap in items:
-        vm.place_image_fit(fig, f"{FIG}/structures/{stem}.png", cx, 0.850, bw, bh, FW, FH)
-        fig.text(cx, 0.778, cap, fontsize=6.5, color=vs.NOTE, ha="center", va="center", zorder=10)
-    fig.text(0.082, 0.992, tr(lang, "Which mimic holds each target for the longest dosing interval", "Qual mimético mantém cada alvo pelo maior intervalo de dose"),
-             fontsize=8.4, fontweight="bold", color=vs.INK, ha="left", va="top")
-    fig.text(0.082, 0.962, tr(lang, "Structures are illustrations of the deposited coordinates; every value is read from the design space.",
-                              "As estruturas ilustram as coordenadas depositadas; todo valor é lido do espaço de projeto."),
-             fontsize=6.6, color=vs.NOTE, ha="left", va="top")
+        vm.place_image_fit(fig, f"{FIG}/structures/{stem}.png", cx, 0.905, bw, bh, FW, FH)
+        fig.text(cx, 0.832, cap, fontsize=6.5, color=vs.NOTE, ha="center", va="center", zorder=10)
     # ---------------------------------------------------------------- keys
-    ky = 0.066
+    ky = 0.070
     fig.add_artist(Line2D([0.082, 0.112], [ky, ky], color=vs.INK2, lw=2.4, transform=fig.transFigure))
     fig.text(0.119, ky, tr(lang, "first place, primary reading; band: 3× to 30×", "primeiro lugar, leitura primária; faixa: 3× a 30×"), fontsize=6.5, color=vs.INK2, va="center")
-    fig.add_artist(Line2D([0.082, 0.112], [ky - 0.022, ky - 0.022], color=vs.INK2, lw=1.15, ls=(0, (5, 2)), transform=fig.transFigure))
-    fig.text(0.119, ky - 0.022, tr(lang, "other series, same rule; dotted: reference of median stability (34 h)", "outras séries, mesma regra; pontilhada: referência de estabilidade mediana (34 h)"), fontsize=6.5, color=vs.INK2, va="center")
-    note = tr(lang, "Row 3 markers: ○ low, ◆ midpoint and □ high end of the scan of ρ; hollow at 0 h when no interval qualifies. Vertical dotted lines in a to c: the three anchors of ρ.",
-              "Marcadores da linha 3: ○ ponta baixa, ◆ ponto médio e □ ponta alta da varredura de ρ; vazado em 0 h quando nenhum intervalo serve. Linhas pontilhadas verticais em a a c: as três âncoras de ρ.")
-    fig.text(0.082, 0.031, "\n".join(textwrap.wrap(note, 125)), fontsize=6.5, color=vs.INK2, va="top", ha="left", linespacing=1.25)
+    fig.add_artist(Line2D([0.082, 0.112], [ky - 0.022, ky - 0.022], color=vs.INK2, lw=1.15, ls="-", transform=fig.transFigure))
+    fig.text(0.119, ky - 0.022, tr(lang, "thin line: other measured series, same rule; dotted: reference of median stability (34 h)", "linha fina: outras séries medidas, mesma regra; pontilhada: referência de estabilidade mediana (34 h)"), fontsize=6.5, color=vs.INK2, va="center")
     # EN/PT: no text may leave the page, or the tight box grows past 174 mm | nenhum texto pode sair da pagina
     fig.canvas.draw()
     rend = fig.canvas.get_renderer()
