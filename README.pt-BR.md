@@ -79,7 +79,7 @@ python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # tem de passar antes de versionar
 ```
 
-O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 1038 verificacoes passam.
+O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 1045 verificacoes passam.
 
 ## Limites
 

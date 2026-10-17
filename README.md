@@ -79,7 +79,7 @@ python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # must pass before committing
 ```
 
-`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 1038 checks currently pass.
+`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 1045 checks currently pass.
 
 ## Limits
 

@@ -1,0 +1,486 @@
+LOCUS       NM_012104               5835 bp    mRNA    linear   PRI 30-APR-2025
+DEFINITION  Homo sapiens beta-secretase 1 (BACE1), transcript variant a, mRNA.
+ACCESSION   NM_012104
+VERSION     NM_012104.6
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 5835)
+  AUTHORS   Katusic,Z.S., d'Uscio,L.V. and He,T.
+  TITLE     Cerebrovascular Endothelial Dysfunction: Role of BACE1
+  JOURNAL   Arterioscler Thromb Vasc Biol 44 (8), 1737-1747 (2024)
+   PUBMED   38868939
+  REMARK    GeneRIF: Cerebrovascular Endothelial Dysfunction: Role of BACE1.
+            Review article
+REFERENCE   2  (bases 1 to 5835)
+  AUTHORS   Saraceno,C., Cervellati,C., Trentini,A., Crescenti,D.,
+            Longobardi,A., Geviti,A., Bonfiglio,N.S., Bellini,S., Nicsanu,R.,
+            Fostinelli,S., Mola,G., Riccetti,R., Moretti,D.V., Zanetti,O.,
+            Binetti,G., Zuliani,G. and Ghidoni,R.
+  TITLE     Serum Beta-Secretase 1 Activity Is a Potential Marker for the
+            Differential Diagnosis between Alzheimer's Disease and
+            Frontotemporal Dementia: A Pilot Study
+  JOURNAL   Int J Mol Sci 25 (15), 8354 (2024)
+   PUBMED   39125924
+  REMARK    GeneRIF: Serum Beta-Secretase 1 Activity Is a Potential Marker for
+            the Differential Diagnosis between Alzheimer's Disease and
+            Frontotemporal Dementia: A Pilot Study.
+REFERENCE   3  (bases 1 to 5835)
+  AUTHORS   Gao,F., Zhang,M., Wang,Q., Ni,M., Liu,C., Deng,K., Xie,Q., Wang,S.,
+            Shi,J. and Shen,Y.
+  CONSRTM   For CANDI Consortium
+  TITLE     Associations of CSF BACE1 with amyloid pathology,
+            neurodegeneration, and cognition in Alzheimer's disease
+  JOURNAL   Acta Neuropathol 147 (1), 97 (2024)
+   PUBMED   38856925
+  REMARK    GeneRIF: Associations of CSF BACE1 with amyloid pathology,
+            neurodegeneration, and cognition in Alzheimer's disease.
+REFERENCE   4  (bases 1 to 5835)
+  AUTHORS   Kandalepas,P.C. and Vassar,R.
+  TITLE     The normal and pathologic roles of the Alzheimer's beta-secretase,
+            BACE1
+  JOURNAL   Curr Alzheimer Res 11 (5), 441-449 (2014)
+   PUBMED   24893886
+  REMARK    Review article
+REFERENCE   5  (bases 1 to 5835)
+  AUTHORS   De Pietri Tonelli,D., Mihailovich,M., Di Cesare,A., Codazzi,F.,
+            Grohovaz,F. and Zacchetti,D.
+  TITLE     Translational regulation of BACE-1 expression in neuronal and
+            non-neuronal cells
+  JOURNAL   Nucleic Acids Res 32 (5), 1808-1817 (2004)
+   PUBMED   15034149
+  REMARK    GeneRIF: Alternative splicing in the BACE-1 5'UTR affects the
+            efficiency of translation initiation
+REFERENCE   6  (bases 1 to 5835)
+  AUTHORS   Tanahashi,H. and Tabira,T.
+  TITLE     Three novel alternatively spliced isoforms of the human beta-site
+            amyloid precursor protein cleaving enzyme (BACE) and their effect
+            on amyloid beta-peptide production
+  JOURNAL   Neurosci Lett 307 (1), 9-12 (2001)
+   PUBMED   11516562
+REFERENCE   7  (bases 1 to 5835)
+  AUTHORS   Sinha,S., Anderson,J.P., Barbour,R., Basi,G.S., Caccavello,R.,
+            Davis,D., Doan,M., Dovey,H.F., Frigon,N., Hong,J.,
+            Jacobson-Croak,K., Jewett,N., Keim,P., Knops,J., Lieberburg,I.,
+            Power,M., Tan,H., Tatsuno,G., Tung,J., Schenk,D., Seubert,P.,
+            Suomensaari,S.M., Wang,S., Walker,D., Zhao,J., McConlogue,L. and
+            John,V.
+  TITLE     Purification and cloning of amyloid precursor protein
+            beta-secretase from human brain
+  JOURNAL   Nature 402 (6761), 537-540 (1999)
+   PUBMED   10591214
+REFERENCE   8  (bases 1 to 5835)
+  AUTHORS   Yan,R., Bienkowski,M.J., Shuck,M.E., Miao,H., Tory,M.C.,
+            Pauley,A.M., Brashier,J.R., Stratman,N.C., Mathews,W.R., Buhl,A.E.,
+            Carter,D.B., Tomasselli,A.G., Parodi,L.A., Heinrikson,R.L. and
+            Gurney,M.E.
+  TITLE     Membrane-anchored aspartyl protease with Alzheimer's disease
+            beta-secretase activity
+  JOURNAL   Nature 402 (6761), 533-537 (1999)
+   PUBMED   10591213
+REFERENCE   9  (bases 1 to 5835)
+  AUTHORS   Vassar,R., Bennett,B.D., Babu-Khan,S., Kahn,S., Mendiaz,E.A.,
+            Denis,P., Teplow,D.B., Ross,S., Amarante,P., Loeloff,R., Luo,Y.,
+            Fisher,S., Fuller,J., Edenson,S., Lile,J., Jarosinski,M.A.,
+            Biere,A.L., Curran,E., Burgess,T., Louis,J.C., Collins,F.,
+            Treanor,J., Rogers,G. and Citron,M.
+  TITLE     Beta-secretase cleavage of Alzheimer's amyloid precursor protein by
+            the transmembrane aspartic protease BACE
+  JOURNAL   Science 286 (5440), 735-741 (1999)
+   PUBMED   10531052
+REFERENCE   10 (bases 1 to 5835)
+  AUTHORS   Urmoneit,B., Reinsch,C., Turner,J., Czech,C., Beyreuther,K. and
+            Dyrks,T.
+  TITLE     Inhibition of beta A4 production by specific modulation of
+            beta-secretase activity
+  JOURNAL   J Mol Neurosci 6 (1), 23-32 (1995)
+   PUBMED   8562317
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AP000892.4 and KC877486.1.
+            This sequence is a reference standard in the RefSeqGene project.
+            
+            On Nov 19, 2020 this sequence version replaced NM_012104.5.
+            
+            Summary: This gene encodes a member of the peptidase A1 family of
+            aspartic proteases. Alternative splicing results in multiple
+            transcript variants, at least one of which encodes a preproprotein
+            that is proteolytically processed to generate the mature protease.
+            This transmembrane protease catalyzes the first step in the
+            formation of amyloid beta peptide from amyloid precursor protein.
+            Amyloid beta peptides are the main constituent of amyloid beta
+            plaques, which accumulate in the brains of human Alzheimer's
+            disease patients. [provided by RefSeq, Nov 2015].
+            
+            Transcript Variant: This variant (a) is the longest transcript and
+            it encodes the longest isoform (A).
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: AF201468.1, BC065492.1 [ECO:0000332]
+            RNAseq introns              :: mixed sample support SAMEA1965299,
+                                           SAMEA1966682 [ECO:0006172]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000313005.11/ ENSP00000318585.6
+            RefSeq Select criteria :: based on conservation, expression,
+                                      longest protein
+            regulatory uORF        :: PMID: 15034149
+            ##RefSeq-Attributes-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-722               AP000892.4         114018-114739       c
+            723-811             AP000892.4         95356-95444         c
+            812-1028            AP000892.4         93614-93830         c
+            1029-1166           AP000892.4         92354-92491         c
+            1167-1301           AP000892.4         91537-91671         c
+            1302-1403           AP000892.4         90195-90296         c
+            1404-1553           AP000892.4         89383-89532         c
+            1554-1725           AP000892.4         88971-89142         c
+            1726-2152           KC877486.1         77-503
+            2153-5835           AP000892.4         84181-87863         c
+FEATURES             Location/Qualifiers
+     source          1..5835
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="11"
+                     /map="11q23.3"
+     gene            1..5835
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="beta-secretase 1"
+                     /db_xref="GeneID:23621"
+                     /db_xref="HGNC:HGNC:933"
+                     /db_xref="MIM:604252"
+     exon            1..722
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      56..67
+                     /regulatory_class="uORF"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /experiment="DESCRIPTION:regulatory uORF[PMID:15034149]"
+                     /note="this uORF is predicted to encode a 3 aa peptide
+                     (PMID:15034149)"
+     regulatory      158..230
+                     /regulatory_class="uORF"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /experiment="DESCRIPTION:regulatory uORF[PMID:15034149]"
+                     /note="this uORF is predicted to encode a 23 aa peptide
+                     (PMID:15034149)"
+     regulatory      225..230
+                     /regulatory_class="uORF"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /experiment="DESCRIPTION:regulatory uORF[PMID:15034149]"
+                     /note="this uORF is predicted to encode 1
+                     aa(PMID:15034149)"
+     misc_feature    228..230
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="upstream in-frame stop codon"
+     regulatory      346..369
+                     /regulatory_class="uORF"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /experiment="DESCRIPTION:regulatory uORF[PMID:15034149]"
+                     /note="this uORF is predicted to encode a 7 aa peptide
+                     (PMID:15034149)"
+     CDS             462..1967
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /EC_number="3.4.23.46"
+                     /note="isoform A preproprotein is encoded by transcript
+                     variant a; beta-site amyloid beta A4 precursor
+                     protein-cleaving enzyme; APP beta-secretase; aspartyl
+                     protease 2; memapsin-2; membrane-associated aspartic
+                     protease 2; transmembrane aspartic proteinase Asp2; asp 2;
+                     beta-site APP cleaving enzyme 1; beta-site APP-cleaving
+                     enzyme"
+                     /codon_start=1
+                     /product="beta-secretase 1 isoform A preproprotein"
+                     /protein_id="NP_036236.1"
+                     /db_xref="CCDS:CCDS8383.1"
+                     /db_xref="GeneID:23621"
+                     /db_xref="HGNC:HGNC:933"
+                     /db_xref="MIM:604252"
+                     /translation="MAQALPWLLLWMGAGVLPAHGTQHGIRLPLRSGLGGAPLGLRLP
+                     RETDEEPEEPGRRGSFVEMVDNLRGKSGQGYYVEMTVGSPPQTLNILVDTGSSNFAVG
+                     AAPHPFLHRYYQRQLSSTYRDLRKGVYVPYTQGKWEGELGTDLVSIPHGPNVTVRANI
+                     AAITESDKFFINGSNWEGILGLAYAEIARPDDSLEPFFDSLVKQTHVPNLFSLQLCGA
+                     GFPLNQSEVLASVGGSMIIGGIDHSLYTGSLWYTPIRREWYYEVIIVRVEINGQDLKM
+                     DCKEYNYDKSIVDSGTTNLRLPKKVFEAAVKSIKAASSTEKFPDGFWLGEQLVCWQAG
+                     TTPWNIFPVISLYLMGEVTNQSFRITILPQQYLRPVEDVATSQDDCYKFAISQSSTGT
+                     VMGAVIMEGFYVVFDRARKRIGFAVSACHVHDEFRTAAVEGPFVTLDMEDCGYNIPQT
+                     DESTLMTIAYVMAAICALFMLPLCLMVCQWRCLRCLRQQHDDFADDISLLK"
+     sig_peptide     462..524
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="COORDINATES: ab initio prediction:SignalP:6.0"
+     proprotein      525..1964
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /product="beta-secretase 1 isoform A proprotein"
+     misc_feature    576..635
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56817.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     mat_peptide     597..1964
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /product="Beta-secretase 1. /id=PRO_0000025940"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56817.3)"
+     misc_feature    837..839
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    918..920
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); glycosylation site"
+     misc_feature    975..977
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); glycosylation site"
+     misc_feature    1128..1130
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); glycosylation site"
+     misc_feature    1284..1286
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1296..1298
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1314..1316
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1356..1358
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1359..1361
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1380..1382
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N6-acetyllysine.
+                     /evidence=ECO:0000269|PubMed:17425515,
+                     ECO:0000269|PubMed:19011241; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); acetylation site"
+     misc_feature    1521..1523
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); glycosylation site"
+     misc_feature    1833..1895
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56817.3);
+                     transmembrane region"
+     misc_feature    1896..1964
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56817.3);
+                     Region: Interaction with RTN3"
+     misc_feature    1947..1961
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56817.3);
+                     Region: DXXLL. /evidence=ECO:0000269|PubMed:15886016"
+     misc_feature    1953..1955
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000269|PubMed:15886016; propagated from
+                     UniProtKB/Swiss-Prot (P56817.3); phosphorylation site"
+     exon            723..811
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            812..1028
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1029..1166
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1167..1301
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1302..1403
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1404..1553
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1554..1725
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1726..5835
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      3701..3706
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="hexamer: AATAAA"
+     polyA_site      3723
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+     regulatory      5810..5815
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="hexamer: AGTAAA"
+     polyA_site      5835
+                     /gene="BACE1"
+                     /gene_synonym="ASP2; BACE; HSPC104"
+                     /note="major polyA site"
+ORIGIN      
+        1 acaagtcttt ccgcctcccc agcccgcccg ggagctgcga gccgcgagct ggattatggt
+       61 ggcctgagca gccaacgcag ccgcaggagc ccggagccct tgcccctgcc cgcgccgccg
+      121 cccgccgggg ggaccaggga agccgccacc ggcccgccat gcccgcccct cccagccccg
+      181 ccgggagccc gcgcccgctg cccaggctgg ccgccgccgt gccgatgtag cgggctccgg
+      241 atcccagcct ctcccctgct cccgtgctct gcggatctcc cctgaccgct ctccacagcc
+      301 cggacccggg ggctggccca gggccctgca ggccctggcg tcctgatgcc cccaagctcc
+      361 ctctcctgag aagccaccag caccacccag acttgggggc aggcgccagg gacggacgtg
+      421 ggccagtgcg agcccagagg gcccgaaggc cggggcccac catggcccaa gccctgccct
+      481 ggctcctgct gtggatgggc gcgggagtgc tgcctgccca cggcacccag cacggcatcc
+      541 ggctgcccct gcgcagcggc ctggggggcg cccccctggg gctgcggctg ccccgggaga
+      601 ccgacgaaga gcccgaggag cccggccgga ggggcagctt tgtggagatg gtggacaacc
+      661 tgaggggcaa gtcggggcag ggctactacg tggagatgac cgtgggcagc cccccgcaga
+      721 cgctcaacat cctggtggat acaggcagca gtaactttgc agtgggtgct gccccccacc
+      781 ccttcctgca tcgctactac cagaggcagc tgtccagcac ataccgggac ctccggaagg
+      841 gtgtgtatgt gccctacacc cagggcaagt gggaagggga gctgggcacc gacctggtaa
+      901 gcatccccca tggccccaac gtcactgtgc gtgccaacat tgctgccatc actgaatcag
+      961 acaagttctt catcaacggc tccaactggg aaggcatcct ggggctggcc tatgctgaga
+     1021 ttgccaggcc tgacgactcc ctggagcctt tctttgactc tctggtaaag cagacccacg
+     1081 ttcccaacct cttctccctg cagctttgtg gtgctggctt ccccctcaac cagtctgaag
+     1141 tgctggcctc tgtcggaggg agcatgatca ttggaggtat cgaccactcg ctgtacacag
+     1201 gcagtctctg gtatacaccc atccggcggg agtggtatta tgaggtgatc attgtgcggg
+     1261 tggagatcaa tggacaggat ctgaaaatgg actgcaagga gtacaactat gacaagagca
+     1321 ttgtggacag tggcaccacc aaccttcgtt tgcccaagaa agtgtttgaa gctgcagtca
+     1381 aatccatcaa ggcagcctcc tccacggaga agttccctga tggtttctgg ctaggagagc
+     1441 agctggtgtg ctggcaagca ggcaccaccc cttggaacat tttcccagtc atctcactct
+     1501 acctaatggg tgaggttacc aaccagtcct tccgcatcac catccttccg cagcaatacc
+     1561 tgcggccagt ggaagatgtg gccacgtccc aagacgactg ttacaagttt gccatctcac
+     1621 agtcatccac gggcactgtt atgggagctg ttatcatgga gggcttctac gttgtctttg
+     1681 atcgggcccg aaaacgaatt ggctttgctg tcagcgcttg ccatgtgcac gatgagttca
+     1741 ggacggcagc ggtggaaggc ccttttgtca ccttggacat ggaagactgt ggctacaaca
+     1801 ttccacagac agatgagtca accctcatga ccatagccta tgtcatggct gccatctgcg
+     1861 ccctcttcat gctgccactc tgcctcatgg tgtgtcagtg gcgctgcctc cgctgcctgc
+     1921 gccagcagca tgatgacttt gctgatgaca tctccctgct gaagtgagga ggcccatggg
+     1981 cagaagatag agattcccct ggaccacacc tccgtggttc actttggtca caagtaggag
+     2041 acacagatgg cacctgtggc cagagcacct caggaccctc cccacccacc aaatgcctct
+     2101 gccttgatgg agaaggaaaa ggctggcaag gtgggttcca gggactgtac ctgtaggaaa
+     2161 cagaaaagag aagaaagaag cactctgctg gcgggaatac tcttggtcac ctcaaattta
+     2221 agtcgggaaa ttctgctgct tgaaacttca gccctgaacc tttgtccacc attcctttaa
+     2281 attctccaac ccaaagtatt cttcttttct tagtttcaga agtactggca tcacacgcag
+     2341 gttaccttgg cgtgtgtccc tgtggtaccc tggcagagaa gagaccaagc ttgtttccct
+     2401 gctggccaaa gtcagtagga gaggatgcac agtttgctat ttgctttaga gacagggact
+     2461 gtataaacaa gcctaacatt ggtgcaaaga ttgcctcttg aattaaaaaa aaaaactaga
+     2521 ttgactattt atacaaatgg gggcggctgg aaagaggaga aggagaggga gtacaaagac
+     2581 agggaatagt gggatcaaag ctaggaaagg cagaaacaca accactcacc agtcctagtt
+     2641 ttagacctca tctccaagat agcatcccat ctcagaagat gggtgttgtt ttcaatgttt
+     2701 tcttttctgt ggttgcagcc tgaccaaaag tgagatggga agggcttatc tagccaaaga
+     2761 gctctttttt agctctctta aatgaagtgc ccactaagaa gttccactta acacatgaat
+     2821 ttctgccata ttaatttcat tgtctctatc tgaaccaccc tttattctac atatgatagg
+     2881 cagcactgaa atatcctaac cccctaagct ccaggtgccc tgtgggagag caactggact
+     2941 atagcagggc tgggctctgt cttcctggtc ataggctcac tctttccccc aaatcttcct
+     3001 ctggagcttt gcagccaagg tgctaaaagg aataggtagg agacctcttc tatctaatcc
+     3061 ttaaaagcat aatgttgaac attcattcaa cagctgatgc cctataaccc ctgcctggat
+     3121 ttcttcctat taggctataa gaagtagcaa gatctttaca taattcagag tggtttcatt
+     3181 gccttcctac cctctctaat ggcccctcca tttatttgac taaagcatca cacagtggca
+     3241 ctagcattat accaagagta tgagaaatac agtgctttat ggctctaaca ttactgcctt
+     3301 cagtatcaag gctgcctgga gaaaggatgg cagcctcagg gcttccttat gtcctccacc
+     3361 acaagagctc cttgatgaag gtcatctttt tcccctatcc tgttcttccc ctccccgctc
+     3421 ctaatggtac gtgggtaccc aggctggttc ttgggctagg tagtggggac caagttcatt
+     3481 acctccctat cagttctagc atagtaaact acggtaccag tgttagtggg aagagctggg
+     3541 ttttcctagt atacccactg catcctactc ctacctggtc aacccgctgc ttccaggtat
+     3601 gggacctgct aagtgtggaa ttacctgata agggagaggg aaatacaagg agggcctctg
+     3661 gtgttcctgg cctcagccag ctgcccacaa gccataaacc aataaaacaa gaatactgag
+     3721 tcagtttttt atctgggttc tcttcattcc cactgcactt ggtgctgctt tggctgactg
+     3781 ggaacacccc ataactacag agtctgacag gaagactgga gactgtccac ttctagctcg
+     3841 gaacttactg tgtaaataaa ctttcagaac tgctaccatg aagtgaaaat gccacatttt
+     3901 gctttataat ttctacccat gttgggaaaa actggctttt tcccagccct ttccagggca
+     3961 taaaactcaa ccccttcgat agcaagtccc atcagcctat tattttttta aagaaaactt
+     4021 gcacttgttt ttctttttac agttacttcc ttcctgcccc aaaattataa actctaagtg
+     4081 taaaaaaaag tcttaacaac agcttcttgc ttgtaaaaat atgtattata catctgtatt
+     4141 tttaaattct gctcctgaaa aatgactgtc ccattctcca ctcactgcat ttggggcctt
+     4201 tcccattggt ctgcatgtct tttatcattg caggccagtg gacagaggga gaagggagaa
+     4261 caggggtcgc caacacttgt gttgctttct gactgatcct gaacaagaaa gagtaacact
+     4321 gaggcgctcg ctcccatgca caactctcca aaacacttat cctcctgcaa gagtgggctt
+     4381 tccagggtct ttactgggaa gcagttaagc cccctcctca ccccttcctt ttttctttct
+     4441 ttactccttt ggcttcaaag gattttggaa aagaaacaat atgctttaca ctcattttca
+     4501 atttctaaat ttgcagggga tactgaaaaa tacggcaggt ggcctaaggc tgctgtaaag
+     4561 ttgaggggag aggaaatctt aagattacaa gataaaaaac gaatccccta aacaaaaaga
+     4621 acaatagaac tggtcttcca ttttgccacc tttcctgttc atgacagcta ctaacctgga
+     4681 gacagtaaca tttcattaac caaagaaagt gggtcacctg acctctgaag agctgagtac
+     4741 tcaggccact ccaatcaccc tacaagatgc caaggaggtc ccaggaagtc cagctcctta
+     4801 aactgacgct agtcaataaa cctgggcaag tgaggcaaga gaaatgagga agaatccatc
+     4861 tgtgaggtga taggcaagga tgaaagacaa agaaggaaaa gagtatcaaa ggcagaaagg
+     4921 agatcattta gttgggtctg aaaggaaaag tctttgctat ccgacatgta ctgctagtac
+     4981 ctgtaagcat tttaggtccc agaatggaaa aaaaaatcag ctattggtaa tataataatg
+     5041 tcctttccct ggagtcagtt tttttaaaaa gttaactctt agtttttact tgtttaattc
+     5101 taaaagagaa gggagctgag gccattccct gtaggagtaa agataaaagg ataggaaaag
+     5161 attcaaagct ctaatagagt cacagctttc ccaggtataa aacctaaaat taagaagtac
+     5221 aataagcaga ggtggaaaat gatctagttc ctgatagcta cccacagagc aagtgattta
+     5281 taaatttgaa atccaaacta ctttcttaat atcactttgg tctccatttt tcccaggaca
+     5341 ggaaatatgt ccccccctaa ctttcttgct tcaaaaatta aaatccagca tcccaagatc
+     5401 attctacaag taattttgca cagacatctc ctcaccccag tgcctgtctg gagctcaccc
+     5461 aaggtcacca aacaacttgg ttgtgaacca actgccttaa ccttctgggg gagggggatt
+     5521 agctagacta ggagaccaga agtgaatggg aaagggtgag gacttcacaa tgttggcctg
+     5581 tcagagcttg attagaagcc aagacagtgg cagcaaagga agacttggcc caggaaaaac
+     5641 ctgtgggttg tgctaatttc tgtccagaaa atagggtgga cagaagcttg tggggtacat
+     5701 ggaggaattg ggacctggtt atgttgttat tctcggactg tgaattttgg tgatgtaaaa
+     5761 cagaatattc tgtaaaccta atgtctgtat aaataatgag cgttaacaca gtaaaatatt
+     5821 caataagaag tcaaa
+//
+

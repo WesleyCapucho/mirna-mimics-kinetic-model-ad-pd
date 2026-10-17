@@ -1,0 +1,322 @@
+LOCUS       NM_000345               3177 bp    mRNA    linear   PRI 07-SEP-2026
+DEFINITION  Homo sapiens synuclein alpha (SNCA), transcript variant 1, mRNA.
+ACCESSION   NM_000345
+VERSION     NM_000345.4
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 3177)
+  AUTHORS   Aggarwal,L., Karmakar,S. and Biswas,P.
+  TITLE     Differentially heterogeneous hydration environment of the familial
+            mutants of alpha-synuclein
+  JOURNAL   J Chem Phys 161 (15) (2024)
+   PUBMED   39412059
+  REMARK    GeneRIF: Differentially heterogeneous hydration environment of the
+            familial mutants of alpha-synuclein.
+REFERENCE   2  (bases 1 to 3177)
+  AUTHORS   Kametani,F., Tahira,M., Takao,M., Matsubara,T., Hasegawa,K.,
+            Yoshida,M., Saito,Y., Murayama,S. and Hasegawa,M.
+  TITLE     Analysis and comparison of post-translational modifications of
+            alpha-synuclein filaments in multiple system atrophy and dementia
+            with Lewy bodies
+  JOURNAL   Sci Rep 14 (1), 22892 (2024)
+   PUBMED   39358446
+  REMARK    GeneRIF: Analysis and comparison of post-translational
+            modifications of alpha-synuclein filaments in multiple system
+            atrophy and dementia with Lewy bodies.
+REFERENCE   3  (bases 1 to 3177)
+  AUTHORS   Xia,P., Cao,Y., Zhao,Q. and Li,H.
+  TITLE     Energy gap of conformational transition related with temperature
+            for the NACore of alpha-synuclein
+  JOURNAL   Phys Chem Chem Phys 26 (35), 23062-23072 (2024)
+   PUBMED   39175373
+  REMARK    GeneRIF: Energy gap of conformational transition related with
+            temperature for the NACore of alpha-synuclein.
+REFERENCE   4  (bases 1 to 3177)
+  AUTHORS   Tripathi,A., Alnakhala,H., Brontesi,L., Selkoe,D. and Dettmer,U.
+  TITLE     RXR nuclear receptor signaling modulates lipid metabolism and
+            triggers lysosomal clearance of alpha-synuclein in neuronal models
+            of synucleinopathy
+  JOURNAL   Cell Mol Life Sci 81 (1), 362 (2024)
+   PUBMED   39162859
+  REMARK    GeneRIF: RXR nuclear receptor signaling modulates lipid metabolism
+            and triggers lysosomal clearance of alpha-synuclein in neuronal
+            models of synucleinopathy.
+REFERENCE   5  (bases 1 to 3177)
+  AUTHORS   Martins,G.F. and Galamba,N.
+  TITLE     Wild-Type alpha-Synuclein Structure and Aggregation: A
+            Comprehensive Coarse-Grained and All-Atom Molecular Dynamics Study
+  JOURNAL   J Chem Inf Model 64 (15), 6115-6131 (2024)
+   PUBMED   39046235
+  REMARK    GeneRIF: Wild-Type alpha-Synuclein Structure and Aggregation: A
+            Comprehensive Coarse-Grained and All-Atom Molecular Dynamics Study.
+REFERENCE   6  (bases 1 to 3177)
+  AUTHORS   Spillantini,M.G., Divane,A. and Goedert,M.
+  TITLE     Assignment of human alpha-synuclein (SNCA) and beta-synuclein
+            (SNCB) genes to chromosomes 4q21 and 5q35
+  JOURNAL   Genomics 27 (2), 379-381 (1995)
+   PUBMED   7558013
+REFERENCE   7  (bases 1 to 3177)
+  AUTHORS   Chen,X., de Silva,H.A., Pettenati,M.J., Rao,P.N., St
+            George-Hyslop,P., Roses,A.D., Xia,Y., Horsburgh,K., Ueda,K. and
+            Saitoh,T.
+  TITLE     The human NACP/alpha-synuclein gene: chromosome assignment to
+            4q21.3-q22 and TaqI RFLP analysis
+  JOURNAL   Genomics 26 (2), 425-427 (1995)
+   PUBMED   7601479
+REFERENCE   8  (bases 1 to 3177)
+  AUTHORS   Campion,D., Martin,C., Heilig,R., Charbonnier,F., Moreau,V.,
+            Flaman,J.M., Petit,J.L., Hannequin,D., Brice,A. and Frebourg,T.
+  TITLE     The NACP/synuclein gene: chromosomal assignment and screening for
+            alterations in Alzheimer disease
+  JOURNAL   Genomics 26 (2), 254-257 (1995)
+   PUBMED   7601450
+REFERENCE   9  (bases 1 to 3177)
+  AUTHORS   Ueda,K., Saitoh,T. and Mori,H.
+  TITLE     Tissue-dependent alternative splicing of mRNA for NACP, the
+            precursor of non-A beta component of Alzheimer's disease amyloid
+  JOURNAL   Biochem Biophys Res Commun 205 (2), 1366-1372 (1994)
+   PUBMED   7802671
+REFERENCE   10 (bases 1 to 3177)
+  AUTHORS   Morris,H. and Lim,S.Y.
+  TITLE     Monogenic Parkinson Disease Overview
+  JOURNAL   (in) Adam MP, Bick S, Mirzaa GM, Wallace SE and Amemiya A (Eds.);
+            GENEREVIEWS(R);
+            (1993)
+   PUBMED   20301402
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AI815523.1, BC108275.1 and
+            AC097478.2.
+            This sequence is a reference standard in the RefSeqGene project.
+            
+            On Jun 2, 2019 this sequence version replaced NM_000345.3.
+            
+            Summary: Alpha-synuclein is a member of the synuclein family, which
+            also includes beta- and gamma-synuclein. Synucleins are abundantly
+            expressed in the brain and alpha- and beta-synuclein inhibit
+            phospholipase D2 selectively. SNCA may serve to integrate
+            presynaptic signaling and membrane trafficking. Defects in SNCA
+            have been implicated in the pathogenesis of Parkinson disease. SNCA
+            peptides are a major component of amyloid plaques in the brains of
+            patients with Alzheimer's disease. Alternatively spliced
+            transcripts encoding different isoforms have been identified for
+            this gene. [provided by RefSeq, Feb 2016].
+            
+            Transcript Variant: This variant (1, also known as NACP140) is the
+            longest transcript and encodes the longer isoform (NACP140).
+            Variants 1, 2, and 3 all encode the same isoform.
+            
+            Sequence Note: This RefSeq record was created from transcript and
+            genomic sequence data to make the sequence consistent with the
+            reference genome assembly. The genomic coordinates used for the
+            transcript record were based on transcript alignments.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: SRR1803612.57584.1,
+                                           SRR1803612.110177.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMEA2145743, SAMEA2149004
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000394991.8/ ENSP00000378442.4
+            RefSeq Select criteria :: based on manual assertion, conservation,
+                                      expression
+            ##RefSeq-Attributes-END##
+            COMPLETENESS: full length.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-8                 AI815523.1         39-46
+            9-1540              BC108275.1         1-1532
+            1541-3177           AC097478.2         109101-110737       c
+FEATURES             Location/Qualifiers
+     source          1..3177
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="4"
+                     /map="4q22.1"
+     gene            1..3177
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="synuclein alpha"
+                     /db_xref="GeneID:6622"
+                     /db_xref="HGNC:HGNC:11138"
+                     /db_xref="MIM:163890"
+     exon            1..200
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            201..346
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     misc_feature    208..210
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="upstream in-frame stop codon"
+     CDS             226..648
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="isoform NACP140 is encoded by transcript variant 1;
+                     non A-beta component of AD amyloid; synuclein alpha-140;
+                     synuclein, alpha (non A4 component of amyloid precursor);
+                     I+/--synuclein"
+                     /codon_start=1
+                     /product="alpha-synuclein isoform NACP140"
+                     /protein_id="NP_000336.1"
+                     /db_xref="CCDS:CCDS3634.1"
+                     /db_xref="GeneID:6622"
+                     /db_xref="HGNC:HGNC:11138"
+                     /db_xref="MIM:163890"
+                     /translation="MDVFMKGLSKAKEGVVAAAEKTKQGVAEAAGKTKEGVLYVGSKT
+                     KEGVVHGVATVAEKTKEQVTNVGGAVVTGVTAVAQKTVEGAGSIAAATGFVKKDQLGK
+                     NEEGAPQEGILEDMPVDPDNEAYEMPSEEGYQDYEPEA"
+     misc_feature    226..228
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="N-acetylmethionine.
+                     /evidence=ECO:0000269|PubMed:22407793; propagated from
+                     UniProtKB/Swiss-Prot (P37840.1); acetylation site"
+     misc_feature    283..426
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="propagated from UniProtKB/Swiss-Prot (P37840.1);
+                     Region: 4 X 11 AA tandem repeats of
+                     [EGS]-K-T-K-[EQ]-[GQ]-V-X(4)"
+     misc_feature    484..486
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000269|PubMed:10617630; propagated from
+                     UniProtKB/Swiss-Prot (P37840.1); phosphorylation site"
+     misc_feature    523..645
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="propagated from UniProtKB/Swiss-Prot (P37840.1);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    556..645
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="propagated from UniProtKB/Swiss-Prot (P37840.1);
+                     Region: Interaction with SERF1A.
+                     /evidence=ECO:0000269|PubMed:22854022"
+     misc_feature    598..600
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="Phosphotyrosine, by FYN.
+                     /evidence=ECO:0000269|PubMed:11162638,
+                     ECO:0000269|PubMed:12893833; propagated from
+                     UniProtKB/Swiss-Prot (P37840.1); phosphorylation site"
+     misc_feature    610..612
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="Phosphoserine, by GRK2, PLK2, CK2, CK1 and GRK5.
+                     /evidence=ECO:0000269|PubMed:10617630,
+                     ECO:0000269|PubMed:11813001, ECO:0000269|PubMed:24936070;
+                     propagated from UniProtKB/Swiss-Prot (P37840.1);
+                     phosphorylation site"
+     exon            347..388
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            389..531
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            532..615
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            616..3177
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      1196..1201
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="hexamer: AATAAA"
+     polyA_site      1221
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="major polyA site"
+     regulatory      2142..2147
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="hexamer: AATAAA"
+     polyA_site      2162
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+     regulatory      3156..3161
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+                     /note="hexamer: AATATA"
+     polyA_site      3177
+                     /gene="SNCA"
+                     /gene_synonym="NACP; PARK1; PARK4; PD1"
+ORIGIN      
+        1 ggcgacgacc agaaggggcc caagagaggg ggcgagcgac cgagcgccgc gacgcggaag
+       61 tgaggtgcgt gcgggctgca gcgcagaccc cggcccggcc cctccgagag cgtcctgggc
+      121 gctccctcac gccttgcctt caagccttct gcctttccac cctcgtgagc ggagaactgg
+      181 gagtggccat tcgacgacag tgtggtgtaa aggaattcat tagccatgga tgtattcatg
+      241 aaaggacttt caaaggccaa ggagggagtt gtggctgctg ctgagaaaac caaacagggt
+      301 gtggcagaag cagcaggaaa gacaaaagag ggtgttctct atgtaggctc caaaaccaag
+      361 gagggagtgg tgcatggtgt ggcaacagtg gctgagaaga ccaaagagca agtgacaaat
+      421 gttggaggag cagtggtgac gggtgtgaca gcagtagccc agaagacagt ggagggagca
+      481 gggagcattg cagcagccac tggctttgtc aaaaaggacc agttgggcaa gaatgaagaa
+      541 ggagccccac aggaaggaat tctggaagat atgcctgtgg atcctgacaa tgaggcttat
+      601 gaaatgcctt ctgaggaagg gtatcaagac tacgaacctg aagcctaaga aatatctttg
+      661 ctcccagttt cttgagatct gctgacagat gttccatcct gtacaagtgc tcagttccaa
+      721 tgtgcccagt catgacattt ctcaaagttt ttacagtgta tctcgaagtc ttccatcagc
+      781 agtgattgaa gtatctgtac ctgcccccac tcagcatttc ggtgcttccc tttcactgaa
+      841 gtgaatacat ggtagcaggg tctttgtgtg ctgtggattt tgtggcttca atctacgatg
+      901 ttaaaacaaa ttaaaaacac ctaagtgact accacttatt tctaaatcct cactattttt
+      961 ttgttgctgt tgttcagaag ttgttagtga tttgctatca tatattataa gatttttagg
+     1021 tgtcttttaa tgatactgtc taagaataat gacgtattgt gaaatttgtt aatatatata
+     1081 atacttaaaa atatgtgagc atgaaactat gcacctataa atactaaata tgaaatttta
+     1141 ccattttgcg atgtgtttta ttcacttgtg tttgtatata aatggtgaga attaaaataa
+     1201 aacgttatct cattgcaaaa atattttatt tttatcccat ctcactttaa taataaaaat
+     1261 catgcttata agcaacatga attaagaact gacacaaagg acaaaaatat aaagttatta
+     1321 atagccattt gaagaaggag gaattttaga agaggtagag aaaatggaac attaacccta
+     1381 cactcggaat tccctgaagc aacactgcca gaagtgtgtt ttggtatgca ctggttcctt
+     1441 aagtggctgt gattaattat tgaaagtggg gtgttgaaga ccccaactac tattgtagag
+     1501 tggtctattt ctcccttcaa tcctgtcaat gtttgcttta cgtattttgg ggaactgttg
+     1561 tttgatgtgt atgtgtttat aattgttata catttttaat tgagcctttt attaacatat
+     1621 attgttattt ttgtctcgaa ataatttttt agttaaaatc tattttgtct gatattggtg
+     1681 tgaatgctgt acctttctga caataaataa tattcgacca tgaataaaaa aaaaaaaaaa
+     1741 gtgggttccc gggaactaag cagtgtagaa gatgattttg actacaccct ccttagagag
+     1801 ccataagaca cattagcaca tattagcaca ttcaaggctc tgagagaatg tggttaactt
+     1861 tgtttaactc agcattcctc actttttttt tttaatcatc agaaattctc tctctctctc
+     1921 tctctttttc tctcgctctc tttttttttt tttttttaca ggaaatgcct ttaaacatcg
+     1981 ttggaactac cagagtcacc ttaaaggaga tcaattctct agactgataa aaatttcatg
+     2041 gcctccttta aatgttgcca aatatatgaa ttctaggatt tttccttagg aaaggttttt
+     2101 ctctttcagg gaagatctat taactcccca tgggtgctga aaataaactt gatggtgaaa
+     2161 aactctgtat aaattaattt aaaaattatt tggtttctct ttttaattat tctggggcat
+     2221 agtcatttct aaaagtcact agtagaaagt ataatttcaa gacagaatat tctagacatg
+     2281 ctagcagttt atatgtattc atgagtaatg tgatatatat tgggcgctgg tgaggaagga
+     2341 aggaggaatg agtgactata aggatggtta ccatagaaac ttcctttttt acctaattga
+     2401 agagagacta ctacagagtg ctaagctgca tgtgtcatct tacactagag agaaatggta
+     2461 agtttcttgt tttatttaag ttatgtttaa gcaaggaaag gatttgttat tgaacagtat
+     2521 atttcaggaa ggttagaaag tggcggttag gatatatttt aaatctacct aaagcagcat
+     2581 attttaaaaa tttaaaagta ttggtattaa attaagaaat agaggacaga actagactga
+     2641 tagcagtgac ctagaacaat ttgagattag gaaagttgtg accatgaatt taaggattta
+     2701 tgtggataca aattctcctt taaagtgttt cttcccttaa tatttatctg acggtaattt
+     2761 ttgagcagtg aattacttta tatatcttaa tagtttattt gggaccaaac acttaaacaa
+     2821 aaagttcttt aagtcatata agccttttca ggaagcttgt ctcatattca ctcccgagac
+     2881 attcacctgc caagtggcct gaggatcaat ccagtcctag gtttattttg cagacttaca
+     2941 ttctcccaag ttattcagcc tcatatgact ccacggtcgg ctttaccaaa acagttcaga
+     3001 gtgcactttg gcacacaatt gggaacagaa caatctaatg tgtggtttgg tattccaagt
+     3061 ggggtctttt tcagaatctc tgcactagtg tgagatgcaa acatgtttcc tcatctttct
+     3121 ggcttatcca gtatgtagct atttgtgaca taataaatat atacatatat gaaaata
+//
+

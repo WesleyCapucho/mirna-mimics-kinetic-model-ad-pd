@@ -2,32 +2,72 @@
  "retrieved_utc": "2026-10-17",
  "sources": {
   "mature": {
-   "url": "https://raw.githubusercontent.com/nf-core/test-datasets/smrnaseq/reference/mature.fa",
-   "etag": "\"d2e3e7fc156fe6c9b4c3c64b513c565b8e85eafa3641baeee01f812b9720e095\"",
-   "bytes": 194966,
-   "sha256_whole_file": "c78fbf3608325953954cc1331554dd9b2503690ab80179edf2727727dfd6bda5",
-   "note": "a copy of the miRBase mature.fa kept by nf-core/test-datasets; the release of miRBase is not stated in the file"
+   "url": "https://mirbase.org/download/mature.fa",
+   "bytes": 6127225,
+   "sha256_whole_file": "52d69eeb3c23c5ed0f66c8c9f24e1ad2cd94cc34e72e4fc376c0dd438d2779ff",
+   "last_modified": null,
+   "note": "mature.fa from mirbase.org; the file does not state the release"
   },
+  "refseq": {
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={acc}&rettype=gb&retmode=text",
+   "records": {
+    "NM_012104.6": {
+     "gene": "BACE1",
+     "mane_select": true,
+     "cds": [
+      462,
+      1967
+     ],
+     "transcript_length": 5835,
+     "utr3_length": 3868
+    },
+    "NM_000345.4": {
+     "gene": "SNCA",
+     "mane_select": true,
+     "cds": [
+      226,
+      648
+     ],
+     "transcript_length": 3177,
+     "utr3_length": 2529
+    }
+   }
+  }
+ },
+ "sha256": {
+  "NM_012104.6.gb": "a4a4506bf97ce302378b77db4acc149e159f170a58b72b7d6ab84d2cbbbed1f1",
+  "NM_000345.4.gb": "8dd11059a29c296b3e6d3a1afd1e5bf3961f536040f92c10c077cc12449cd4df",
+  "BACE1": "db7f175c5c04c96e3af4329dd276896d6f2d1cf1fbe2b9fccfcd93658ae705f2",
+  "SNCA": "927302e7f366c620f394924265873ec41d34a2002ae2e3c3fe7282ac814eb37b",
+  "mirbase_mature_selected.fa": "2e539d2936f924cb4e4f562af350d479dfd264e6261fe40104f45f86822b7dd1",
+  "refGene_selected.tsv": "210b3d462ad09c4e89ff06775b0f2b880dac10dd604fa65402cbc3caba3dc2da"
+ },
+ "crosscheck_hg38": {
   "refGene": {
    "url": "https://s3.amazonaws.com/igv.org.genomes/hg38/refGene.txt.gz",
    "last_modified": "Tue, 11 Aug 2020 21:22:58 GMT",
-   "etag": "\"9de1763005a6053826790305ba4cb4b0\"",
-   "bytes": 8353148,
-   "sha256_whole_file": "3eb963f462bfd137ca5bd586af2eab1e9f509b31bab4114e200c2718b17b6cc7",
-   "table": "UCSC refGene, assembly hg38"
+   "bytes": 8353148
   },
   "hg38": {
    "url": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg38/hg38.fa",
    "last_modified": "Tue, 11 Mar 2014 02:44:51 GMT",
-   "etag": "\"b2aee9f885accc00531e59c4736bee63\"",
-   "bytes": 3273481150,
-   "note": "UCSC hg38 (GRCh38), read by HTTP byte range using the .fai index"
+   "bytes": 3273481150
+  },
+  "result": {
+   "BACE1": {
+    "hg38_refgene_utr3_length": 3880,
+    "refseq_utr3_length": 3868,
+    "identical": false,
+    "refseq_is_prefix_of_hg38": true,
+    "extra_nt_at_3prime_end_in_hg38": 12
+   },
+   "SNCA": {
+    "hg38_refgene_utr3_length": 2529,
+    "refseq_utr3_length": 2529,
+    "identical": true,
+    "refseq_is_prefix_of_hg38": true,
+    "extra_nt_at_3prime_end_in_hg38": 0
+   }
   }
- },
- "sha256": {
-  "BACE1": "ab560180416a1cd02b2ef0c03391eec8fbc104d41c981ab414873ccfb2a535b7",
-  "SNCA": "927302e7f366c620f394924265873ec41d34a2002ae2e3c3fe7282ac814eb37b",
-  "mirbase_mature_selected.fa": "34dbff4e4fa36b7f110efefcd8a667b73637fb43752312ffb2568f65572987ed",
-  "refGene_selected.tsv": "210b3d462ad09c4e89ff06775b0f2b880dac10dd604fa65402cbc3caba3dc2da"
  }
 }
