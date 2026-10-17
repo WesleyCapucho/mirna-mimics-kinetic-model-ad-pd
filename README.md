@@ -12,9 +12,9 @@ This repository holds the data, scripts, tables and figures of a kinetic study o
 - **A design-space map** of the dose needed over repression strength and dosing interval, for nine series.
 - **Structure renders** of four deposited structures (Argonaute 2 with a guide and a target, BACE1, Aβ42 and α-synuclein fibrils), for illustration only.
 
-## Relation to the companion repository
+## Where the scripts were first archived
 
-The companion repository, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas`](https://github.com/WesleyCapucho/-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas) (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256)), holds a systematic review and meta-analysis of circulating miRNAs as diagnostic biomarkers in AD and PD. The two studies share no data and no results. Until this repository was created, the mechanistic scripts lived in the companion repository, so its archived versions up to 1.2.1 still contain them; this repository is their home from now on. Script numbers continue the numbering of the companion repository, so `scripts/12` here is `scripts/12` there.
+The mechanistic scripts were first archived in an earlier repository of the same author (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256), versions up to 1.2.1), which still contains them; this repository is their home from now on. Script numbers continue the numbering of that repository, so `scripts/12` here is `scripts/12` there.
 
 ## Layout
 

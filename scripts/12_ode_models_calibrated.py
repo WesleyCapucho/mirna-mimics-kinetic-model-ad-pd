@@ -6,8 +6,8 @@ EN | Recalibrated ODE models of the miR-29/BACE1/Abeta and miR-7/SNCA/alpha-synu
 PT | Modelos EDO recalibrados dos eixos miR-29/BACE1/Abeta e miR-7/SNCA/alfa-sinucleina,
      guiados pelas constantes medidas em data/extracted/kinetic_parameters.csv.
 
-EN | What changed, and why. The first models of this work (an earlier script of the companion
-     repository, 10.5281/zenodo.23438256) came from the source monograph and
+EN | What changed, and why. The first models of this work (an earlier script, archived at
+     10.5281/zenodo.23438256) came from the source monograph and
      used illustrative parameters: one lumped "miRNA" variable, first-order aggregation,
      and a disease effect entering through production. Every one of those choices is
      contradicted by a measured value now in the parameter table:
@@ -40,8 +40,8 @@ EN | What changed, and why. The first models of this work (an earlier script of 
           (6.7 vs 6.6 %/h, p = 0.96); clearance does (7.6 vs 5.3 %/h, p = 0.03)
           (K001-K004). The disease lever is clearance. The old model moved production.
 
-PT | O que mudou, e por que. Os primeiros modelos deste trabalho (um script anterior do repositorio
-     companheiro, 10.5281/zenodo.23438256) vieram da monografia e usavam
+PT | O que mudou, e por que. Os primeiros modelos deste trabalho (um script anterior, arquivado em
+     10.5281/zenodo.23438256) vieram da monografia e usavam
      parametros ilustrativos: uma variavel "miRNA" agregada, agregacao de primeira
      ordem e efeito de doenca entrando pela producao. Cada uma dessas escolhas e
      contrariada por um valor medido que agora esta na tabela de parametros:

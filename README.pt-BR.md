@@ -12,9 +12,9 @@ Este repositório guarda os dados, scripts, tabelas e figuras de um estudo ciné
 - **Um mapa do espaço de projeto** da dose necessária sobre a força de repressão e o intervalo de dose, para nove séries.
 - **Renders de estrutura** de quatro estruturas depositadas (Argonauta 2 com guia e alvo, BACE1, fibrilas de Aβ42 e de α-sinucleína), só para ilustração.
 
-## Relação com o repositório companheiro
+## Onde os scripts foram arquivados primeiro
 
-O repositório companheiro, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas`](https://github.com/WesleyCapucho/-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas) (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256)), guarda uma revisão sistemática e meta-análise de miRNAs circulantes como biomarcadores diagnósticos na DA e na DP. Os dois estudos não compartilham dados nem resultados. Até este repositório existir, os scripts mecanísticos ficavam no companheiro, então as versões arquivadas dele até a 1.2.1 ainda os contêm; daqui em diante este é o lugar deles. A numeração dos scripts continua a do repositório companheiro: o `scripts/12` daqui é o `scripts/12` de lá.
+Os scripts mecanísticos foram arquivados primeiro num repositório anterior do mesmo autor (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256), versões até a 1.2.1), que ainda os contém; daqui em diante este é o lugar deles. A numeração dos scripts continua a desse repositório: o `scripts/12` daqui é o `scripts/12` de lá.
 
 ## Estrutura
 

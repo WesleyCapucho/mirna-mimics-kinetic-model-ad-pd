@@ -9,7 +9,7 @@ EN | Gathers every number that the Article 2 manuscript (the mechanistic study) 
      stored here, and refuses to build if a placeholder has no value. A number in the
      manuscript therefore cannot differ from the table it came from.
 
-     Like scripts/35 of the companion repository for Article 1, this script computes nothing new about the models.
+     This script computes nothing new about the models.
      It selects, rounds and counts (half-up rounding) from files already written, and a
      few values that are plain arithmetic on two table entries (a ratio, a percentage,
      a time to 90%) are computed here and labelled as such in "_sources". Each value is
@@ -27,7 +27,7 @@ PT | Reune num arquivo plano, results/tables/manuscript2_numbers.json, todo nume
      marcador nao tiver valor. Um numero do manuscrito nao pode diferir da tabela de onde
      veio.
 
-     Como o scripts/35 do repositorio companheiro para o Artigo 1, este script nao calcula nada novo sobre os
+     Este script nao calcula nada novo sobre os
      modelos. Ele seleciona, arredonda e conta (meio-para-cima) a partir de arquivos ja
      gravados, e uns poucos valores que sao aritmetica simples sobre duas entradas da
      tabela (uma razao, uma porcentagem, um tempo ate 90%) sao calculados aqui e

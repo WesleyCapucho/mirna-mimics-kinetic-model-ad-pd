@@ -2,7 +2,7 @@
 
 ## 1. Camada mecanística: modelos EDO e figuras estruturais
 
-Este trabalho pergunta algo mais estreito que a revisão sistemática e meta-análise companheira (10.5281/zenodo.23438256), e deve ser lido assim. Ela não testa se um miRNA funciona como biomarcador. Pergunta o que a cinética medida de cada eixo permite, e onde uma afirmação sobre eles vai além dos números que existem.
+Este trabalho não testa se um miRNA funciona como biomarcador. Pergunta o que a cinética medida de cada eixo permite, e onde uma afirmação sobre eles vai além dos números que existem.
 
 **De onde vêm os parâmetros.** Toda taxa, meia-vida e concentração usada pelo `scripts/12_ode_models_calibrated.py` é carregada por identificador de `data/extracted/kinetic_parameters.csv` (67 linhas, 15 fontes primárias). Os valores foram lidos em textos completos ou arquivos suplementares, nunca em resumos ou citações secundárias, e cada linha numérica guarda a frase de onde veio. A tabela separa quatro tipos de linha: números medidos, restrições qualitativas (resultado afirmado sem número utilizável, como nucleação indetectável em pH neutro), lacunas declaradas e valores derivados por nós de uma tabela primária. O carregador recusa tudo que não seja número medido, então uma lacuna não pode ser preenchida em silêncio.
 

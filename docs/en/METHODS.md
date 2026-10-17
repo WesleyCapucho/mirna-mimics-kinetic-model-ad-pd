@@ -2,7 +2,7 @@
 
 ## 1. Mechanistic layer: ODE models and structural figures
 
-This work asks something narrower than the companion systematic review and meta-analysis (10.5281/zenodo.23438256), and it should be read that way. It does not test whether a miRNA works as a biomarker. It asks what the measured kinetics of each axis allow, and where a claim about them outruns the numbers that exist.
+This work does not test whether a miRNA works as a biomarker. It asks what the measured kinetics of each axis allow, and where a claim about them outruns the numbers that exist.
 
 **Where the parameters come from.** Every rate, half-life and concentration used by `scripts/12_ode_models_calibrated.py` is loaded by identifier from `data/extracted/kinetic_parameters.csv` (67 rows, 15 primary sources). Values were read from full texts or from supplementary files, never from abstracts or from secondary citations, and each numeric row stores the sentence it came from. The table separates four kinds of row: measured numbers, qualitative constraints (a result stated without a usable number, such as nucleation being undetectable at neutral pH), declared gaps, and values derived by us from a primary table. The loader refuses anything that is not a measured number, so a gap cannot be filled silently.
 
