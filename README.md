@@ -33,6 +33,8 @@ The companion repository, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativ
 │   ├── 46_mimic_series_ranking.py         # Which series holds a target down for the longest dosing interval; every threshold and anchor ranked
 │   ├── 47_mimic_series_figure.py          # Figure of the series ranking: renders of the targets above the interval-over-rho plots (main-text figure)
 │   ├── 48_mechanism_algorithm_scheme.py   # Scheme of the molecular mechanism of the two diseases and of the six steps of the algorithm, with renders and small plots drawn from the result tables
+│   ├── 49_mirna_site_pairing.py           # Sequence-level pairing of miR-29, miR-7 and miR-153 with the 3′UTR of BACE1 and SNCA: seed-match sites and pair counts from archived sequences
+│   ├── 50_mirna_site_figure.py            # Figure of the 3′UTRs to scale with the sites opened as duplexes
 │   ├── 39_structure_renders_article2.py   # PyMOL renders of the four structures (illustration only)
 │   ├── 37_manuscript2_numbers.py          # Every number a manuscript quotes, read from the tables (numbers only)
 │   ├── 38_mechanistic_figures.py          # The seven main-text figures, fitted to the journal's artwork limits
@@ -69,13 +71,15 @@ python scripts/37_manuscript2_numbers.py           # needs 12, 17, 36, 39 and 40
 python scripts/38_mechanistic_figures.py           # needs 12, 13, 17, 36, 39 and 40
 python scripts/47_mimic_series_figure.py           # needs 39, 40 and 46
 python scripts/48_mechanism_algorithm_scheme.py     # needs 12, 13, 17, 36, 39, 40 and 46
+python scripts/49_mirna_site_pairing.py             # reads data/raw/sequences_2026; add --fetch to download the inputs again
+python scripts/50_mirna_site_figure.py              # needs 49
 python scripts/19_mechanism_animations.py
 python scripts/18_graphical_abstract.py            # needs 12, 17 and 13
 python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # must pass before committing
 ```
 
-`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 991 checks currently pass.
+`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 1038 checks currently pass.
 
 ## Limits
 

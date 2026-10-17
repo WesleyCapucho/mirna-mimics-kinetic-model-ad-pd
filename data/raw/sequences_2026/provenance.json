@@ -1,0 +1,33 @@
+{
+ "retrieved_utc": "2026-10-17",
+ "sources": {
+  "mature": {
+   "url": "https://raw.githubusercontent.com/nf-core/test-datasets/smrnaseq/reference/mature.fa",
+   "etag": "\"d2e3e7fc156fe6c9b4c3c64b513c565b8e85eafa3641baeee01f812b9720e095\"",
+   "bytes": 194966,
+   "sha256_whole_file": "c78fbf3608325953954cc1331554dd9b2503690ab80179edf2727727dfd6bda5",
+   "note": "a copy of the miRBase mature.fa kept by nf-core/test-datasets; the release of miRBase is not stated in the file"
+  },
+  "refGene": {
+   "url": "https://s3.amazonaws.com/igv.org.genomes/hg38/refGene.txt.gz",
+   "last_modified": "Tue, 11 Aug 2020 21:22:58 GMT",
+   "etag": "\"9de1763005a6053826790305ba4cb4b0\"",
+   "bytes": 8353148,
+   "sha256_whole_file": "3eb963f462bfd137ca5bd586af2eab1e9f509b31bab4114e200c2718b17b6cc7",
+   "table": "UCSC refGene, assembly hg38"
+  },
+  "hg38": {
+   "url": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg38/hg38.fa",
+   "last_modified": "Tue, 11 Mar 2014 02:44:51 GMT",
+   "etag": "\"b2aee9f885accc00531e59c4736bee63\"",
+   "bytes": 3273481150,
+   "note": "UCSC hg38 (GRCh38), read by HTTP byte range using the .fai index"
+  }
+ },
+ "sha256": {
+  "BACE1": "ab560180416a1cd02b2ef0c03391eec8fbc104d41c981ab414873ccfb2a535b7",
+  "SNCA": "927302e7f366c620f394924265873ec41d34a2002ae2e3c3fe7282ac814eb37b",
+  "mirbase_mature_selected.fa": "34dbff4e4fa36b7f110efefcd8a667b73637fb43752312ffb2568f65572987ed",
+  "refGene_selected.tsv": "210b3d462ad09c4e89ff06775b0f2b880dac10dd604fa65402cbc3caba3dc2da"
+ }
+}

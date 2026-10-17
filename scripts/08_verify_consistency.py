@@ -1009,6 +1009,68 @@ def main():
     except FileNotFoundError:
         claim(False, "results/tables/mimic_series_ranking.json missing; run scripts/46 after scripts/40")
 
+    # --- 9e. The miRNA-3'UTR pairing rests on archived sequences and is recomputed here ---
+    # EN | scripts/49 scans the 3'UTR of BACE1 (NM_012104) and SNCA (NM_000345) for seed-match
+    #      sites of five microRNAs. Here the archived sequences are checked against the SHA-256
+    #      in provenance.json, the scan is repeated by a separate loop with regular expressions,
+    #      and the sites, their types and the pair counts must equal the table.
+    # PT | O scripts/49 varre o 3'UTR de BACE1 e SNCA atras de sitios de pareamento da semente
+    #      de cinco microRNAs. Aqui as sequencias arquivadas sao conferidas contra o SHA-256 de
+    #      provenance.json, a varredura e refeita por outro laco com expressoes regulares, e
+    #      os sitios, seus tipos e as contagens de pares precisam ser iguais a tabela.
+    try:
+        import hashlib as hl_
+        prov_ = json.load(open("data/raw/sequences_2026/provenance.json", encoding="utf-8"))
+        fa_ = {}
+        nm_ = None
+        for ln_ in open("data/extracted/utr3_sequences.fa", encoding="utf-8"):
+            ln_ = ln_.strip()
+            if ln_.startswith(">"):
+                nm_ = ln_[1:].split("|")[0]
+                fa_[nm_] = ""
+            elif nm_:
+                fa_[nm_] += ln_
+        for g_ in ("BACE1", "SNCA"):
+            check(hl_.sha256(fa_[g_].encode()).hexdigest() == prov_["sha256"][g_], f"3'UTR of {g_}: the archived sequence no longer matches provenance.json")
+            check(set(fa_[g_]) <= set("ACGU"), f"3'UTR of {g_}: a character other than A, C, G, U")
+        check(len(fa_["BACE1"]) == 3880 and len(fa_["SNCA"]) == 2529, "3'UTR lengths changed (BACE1 3,880 nt, SNCA 2,529 nt)")
+        mat_ = {}
+        for ln_ in open("data/raw/sequences_2026/mirbase_mature_selected.fa", encoding="utf-8"):
+            ln_ = ln_.strip()
+            if ln_.startswith(">"):
+                nm_ = ln_[1:].split()[0]
+                mat_[nm_] = ""
+            else:
+                mat_[nm_] += ln_
+        comp_ = str.maketrans("ACGU", "UGCA")
+        rc_ = lambda x_: x_.translate(comp_)[::-1]
+        check(len({mat_[m_][1:8] for m_ in ("hsa-miR-29a-3p", "hsa-miR-29b-3p", "hsa-miR-29c-3p")}) == 1, "the three miR-29 paralogues no longer share the seed (nt 2-8)")
+        tab_ = list(csv.DictReader(open("results/tables/mirna_site_pairing.csv", encoding="utf-8")))
+        import re as re_
+        want_ = 0
+        for g_ in ("BACE1", "SNCA"):
+            for m_, seq_ in mat_.items():
+                s78_, s27_ = rc_(seq_[1:8]), rc_(seq_[1:7])
+                u_ = fa_[g_]
+                pos78_ = [m.start() for m in re_.finditer(f"(?={s78_})", u_)]
+                pos27_ = [m.start() for m in re_.finditer(f"(?={s27_}A)", u_) if m.start() >= 1 and u_[m.start() - 1:m.start() + 6] != s78_]
+                got_ = sorted((int(r_["utr_start"]), r_["site_type"]) for r_ in tab_ if r_["gene"] == g_ and r_["mirna"] == m_)
+                exp_ = sorted([(p_ + 1, "8mer" if u_[p_ + 7:p_ + 8] == "A" else "7mer-m8") for p_ in pos78_] + [(p_ + 1, "7mer-A1") for p_ in pos27_])
+                check(got_ == exp_, f"miRNA sites of {m_} in the 3'UTR of {g_}: the table has {got_}, a separate scan finds {exp_}")
+                want_ += len(exp_)
+        check(len(tab_) == want_, f"mirna_site_pairing.csv has {len(tab_)} sites, a separate scan finds {want_}")
+        for r_ in tab_:      # the pair marks recounted from the two sequences
+            m_ = mat_[r_["mirna"]]
+            a1_ = int(r_["a1_position"]) - 1
+            pairs_ = 0
+            for k_ in range(1, len(m_) + 1):
+                p_ = a1_ - (k_ - 1)
+                if 0 <= p_ < len(fa_[r_["gene"]]) and (m_[k_ - 1], fa_[r_["gene"]][p_]) in {("A", "U"), ("U", "A"), ("G", "C"), ("C", "G"), ("G", "U"), ("U", "G")}:
+                    pairs_ += 1
+            check(pairs_ == int(r_["pairs_total"]), f"{r_['mirna']} at {r_['gene']} {r_['utr_start']}: {pairs_} pairs recounted, the table says {r_['pairs_total']}")
+    except FileNotFoundError as exc_:
+        claim(False, f"{exc_.filename} missing; run scripts/49_mirna_site_pairing.py")
+
     # --- 9b. Main-text figures stay inside the journal's artwork limits ---
     # EN | scripts/_journal_fit.py records the size, lettering and line width of every
     #      main-text figure it writes. A figure regenerated outside the limits (174 x 234
@@ -1022,7 +1084,7 @@ def main():
         spec_rows = {r["file"]: r for r in csv.DictReader(open("results/tables/journal_figure_spec.csv", encoding="utf-8"))}
         for stem in (# scripts/38_mechanistic_figures.py
                      "mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                     "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm"):
+                     "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm", "mech_mirna_site_pairing"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem}.{lang_}.png"
                 r_ = spec_rows.get(f_)
@@ -1062,7 +1124,7 @@ def main():
               "(pip install pymupdf) | o contraste e a resolucao de imagem das figuras nao foram medidos")
     if art45 is not None:
         for stem_ in ("mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                      "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm"):
+                      "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm", "mech_mirna_site_pairing"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem_}.{lang_}.pdf"
                 if not os.path.exists(f_):
