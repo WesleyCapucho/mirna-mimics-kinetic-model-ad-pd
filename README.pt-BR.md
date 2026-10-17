@@ -32,6 +32,7 @@ O repositório companheiro, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerat
 │   ├── 40_mimic_design_space.py           # Dose necessária sobre força de repressão e intervalo de dose, nove séries
 │   ├── 46_mimic_series_ranking.py         # Qual série mantém um alvo baixo pelo maior intervalo de dose; todo limiar e toda âncora ordenados
 │   ├── 47_mimic_series_figure.py          # Figura da ordenação das séries: renders dos alvos acima dos gráficos de intervalo sobre rho (figura do texto principal)
+│   ├── 48_mechanism_algorithm_scheme.py   # Esquema do mecanismo molecular das duas doenças e dos seis passos do algoritmo, com renders e gráficos pequenos desenhados das tabelas de resultado
 │   ├── 39_structure_renders_article2.py   # Renders do PyMOL das quatro estruturas (só ilustração)
 │   ├── 37_manuscript2_numbers.py          # Todo número que um manuscrito cita, lido das tabelas (só números)
 │   ├── 38_mechanistic_figures.py          # As sete figuras do texto principal, ajustadas aos limites de arte da revista
@@ -67,13 +68,14 @@ python scripts/39_structure_renders_article2.py   # precisa da tabela de proveni
 python scripts/37_manuscript2_numbers.py           # precisa do 12, 17, 36, 39 e 40
 python scripts/38_mechanistic_figures.py           # precisa do 12, 13, 17, 36, 39 e 40
 python scripts/47_mimic_series_figure.py           # precisa do 39, 40 e 46
+python scripts/48_mechanism_algorithm_scheme.py     # precisa do 12, 13, 17, 36, 39, 40 e 46
 python scripts/19_mechanism_animations.py
 python scripts/18_graphical_abstract.py            # precisa do 12, 17 e 13
 python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # tem de passar antes de versionar
 ```
 
-O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 971 verificacoes passam.
+O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 991 verificacoes passam.
 
 ## Limites
 

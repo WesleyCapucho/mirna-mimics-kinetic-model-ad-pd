@@ -1022,7 +1022,7 @@ def main():
         spec_rows = {r["file"]: r for r in csv.DictReader(open("results/tables/journal_figure_spec.csv", encoding="utf-8"))}
         for stem in (# scripts/38_mechanistic_figures.py
                      "mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                     "mech_target_response", "mech_design_space", "mech_series_ranking"):
+                     "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem}.{lang_}.png"
                 r_ = spec_rows.get(f_)
@@ -1062,7 +1062,7 @@ def main():
               "(pip install pymupdf) | o contraste e a resolucao de imagem das figuras nao foram medidos")
     if art45 is not None:
         for stem_ in ("mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                      "mech_target_response", "mech_design_space", "mech_series_ranking"):
+                      "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem_}.{lang_}.pdf"
                 if not os.path.exists(f_):
