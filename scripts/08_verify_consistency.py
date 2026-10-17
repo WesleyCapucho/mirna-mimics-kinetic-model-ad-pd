@@ -31,6 +31,7 @@ import math
 import re
 import sys
 from collections import Counter
+from decimal import Decimal, ROUND_HALF_UP
 
 KINETICS = "data/extracted/kinetic_parameters.csv"
 SCHWANHAUSSER = "data/raw/kinetics_2026/schwanhausser_2011_supplementary_table.xls"
@@ -990,8 +991,97 @@ def main():
             check(f_["species"] == [max(half_, key=half_.get)], f"series ranking: the featured series of {axis_} is {f_['species']}, the most stable measured species is {max(half_, key=half_.get)}")
         check(rank_json["reference_at_least_as_long_as_first_place"]["of"] == len(by_group) - sum(1 for k_ in by_group if not any(r_["reference"] == "True" for r_ in by_group[k_])),
               "series ranking: the count of reference comparisons does not match the groups")
+        # EN/PT: the combinations with a single first place and the rounding of the intervals quoted in the text | combinacoes com um so primeiro lugar e o arredondamento dos intervalos citados no texto
+        single_ = sum(1 for k_, g_ in by_group.items()
+                      if sum(1 for r_ in g_ if r_["reference"] == "False" and r_["rank_among_studied"] == "1") == 1)
+        nums_ = json.load(open("results/tables/manuscript2_numbers.json", encoding="utf-8"))
+        nums_ = nums_.get("values", nums_)
+        check(int(nums_["rank.combos_single"]) == single_ and int(nums_["rank.combos"]) - int(nums_["rank.ties"]) == single_,
+              f"series ranking: {single_} combinations have a single first place; the numbers file says {nums_['rank.combos_single']}")
+        def near_(x_):
+            return str(int(Decimal(repr(round(x_, 8))).quantize(Decimal(1), rounding=ROUND_HALF_UP))) if x_ >= 10 else str(Decimal(repr(round(x_, 8))).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+        for tok_, ax_, sp_, kd_ in (("ds.AD.c.ad.i10_rng", "AD", "miR-29c", "0.2921"), ("ds.AD.b.ad.i10_rng", "AD", "miR-29b", "0.2921"),
+                                    ("ds.PD.m7ub.a.i10_rng", "PD", "miR-7 upper bound", "0.3"), ("ds.PD.m7.a.i10_rng", "PD", "miR-7", "0.3")):
+            v_ = [float(r_["interval_h"]) for r_ in rank_rows if r_["axis"] == ax_ and r_["species"] == sp_ and r_["threshold_x"] == "10"
+                  and abs(float(r_["target_knockdown"]) - float(kd_)) < 1e-3 and r_["anchor"] != "K065 floor"]
+            want_ = near_(min(v_)) if near_(min(v_)) == near_(max(v_)) else f"{near_(min(v_))} to {near_(max(v_))}"
+            check(nums_[tok_] == want_, f"series ranking: the text quotes {nums_[tok_]} h for {sp_} ({ax_}) at 10 times; the table gives {want_} h, rounded to the nearest")
     except FileNotFoundError:
         claim(False, "results/tables/mimic_series_ranking.json missing; run scripts/46 after scripts/40")
+
+    # --- 9e. The miRNA-3'UTR pairing rests on archived sequences and is recomputed here ---
+    # EN | scripts/49 scans the 3'UTR of BACE1 (NM_012104) and SNCA (NM_000345) for seed-match
+    #      sites of five microRNAs. Here the archived sequences are checked against the SHA-256
+    #      in provenance.json, the 3'UTR is cut again from the GenBank record (after the CDS), the
+    #      scan is repeated by a separate loop with regular expressions, and the sites, their
+    #      types and the pair counts must equal the table.
+    # PT | O scripts/49 varre o 3'UTR de BACE1 e SNCA atras de sitios de pareamento da semente
+    #      de cinco microRNAs. Aqui as sequencias arquivadas sao conferidas contra o SHA-256 de
+    #      provenance.json, a varredura e refeita por outro laco com expressoes regulares, e
+    #      os sitios, seus tipos e as contagens de pares precisam ser iguais a tabela.
+    try:
+        import hashlib as hl_
+        prov_ = json.load(open("data/raw/sequences_2026/provenance.json", encoding="utf-8"))
+        fa_ = {}
+        nm_ = None
+        for ln_ in open("data/extracted/utr3_sequences.fa", encoding="utf-8"):
+            ln_ = ln_.strip()
+            if ln_.startswith(">"):
+                nm_ = ln_[1:].split("|")[0]
+                fa_[nm_] = ""
+            elif nm_:
+                fa_[nm_] += ln_
+        for g_, acc_ in (("BACE1", "NM_012104.6"), ("SNCA", "NM_000345.4")):
+            check(hl_.sha256(fa_[g_].encode()).hexdigest() == prov_["sha256"][g_], f"3'UTR of {g_}: the archived sequence no longer matches provenance.json")
+            check(set(fa_[g_]) <= set("ACGU"), f"3'UTR of {g_}: a character other than A, C, G, U")
+            gbt_ = open(f"data/raw/sequences_2026/{acc_}.gb", encoding="utf-8").read()
+            check(hl_.sha256(gbt_.encode()).hexdigest() == prov_["sha256"][f"{acc_}.gb"], f"{acc_}.gb no longer matches provenance.json")
+            cds_ = re.search(r"^     CDS\s+(\d+)\.\.(\d+)\s*$", gbt_, re.M)
+            orig_ = gbt_[gbt_.index("ORIGIN"):]
+            seq_ = "".join(re.findall(r"[acgtn]+", "".join(l_[10:] for l_ in orig_.splitlines()[1:] if l_.strip() and not l_.startswith("//")))).upper().replace("T", "U")
+            check(seq_[int(cds_.group(2)):] == fa_[g_], f"3'UTR of {g_}: not the sequence after the CDS of {acc_}")
+            check(re.search(rf"^VERSION\s+{re.escape(acc_)}\s*$", gbt_, re.M) is not None and "MANE Select" in gbt_.split("FEATURES")[0], f"{acc_} is not the expected MANE Select version")
+        check(len(fa_["BACE1"]) == 3868 and len(fa_["SNCA"]) == 2529, "3'UTR lengths changed (BACE1 3,868 nt, SNCA 2,529 nt)")
+        cc_ = prov_.get("crosscheck_hg38", {}).get("result", {})
+        if cc_:
+            check(cc_["SNCA"]["identical"] and cc_["BACE1"]["refseq_is_prefix_of_hg38"] and cc_["BACE1"]["extra_nt_at_3prime_end_in_hg38"] == 12,
+                  "the cross-check against hg38 no longer reads: SNCA identical, BACE1 RefSeq plus 12 nt")
+        mat_ = {}
+        for ln_ in open("data/raw/sequences_2026/mirbase_mature_selected.fa", encoding="utf-8"):
+            ln_ = ln_.strip()
+            if ln_.startswith(">"):
+                nm_ = ln_[1:].split()[1]            # keyed by the miRBase accession; names change between releases
+                mat_[nm_] = ""
+            else:
+                mat_[nm_] += ln_
+        comp_ = str.maketrans("ACGU", "UGCA")
+        rc_ = lambda x_: x_.translate(comp_)[::-1]
+        check(len({mat_[m_][1:8] for m_ in ("MIMAT0000086", "MIMAT0000100", "MIMAT0000681")}) == 1, "the three miR-29 paralogues no longer share the seed (nt 2-8)")
+        tab_ = list(csv.DictReader(open("results/tables/mirna_site_pairing.csv", encoding="utf-8")))
+        import re as re_
+        want_ = 0
+        for g_ in ("BACE1", "SNCA"):
+            for m_, seq_ in mat_.items():
+                s78_, s27_ = rc_(seq_[1:8]), rc_(seq_[1:7])
+                u_ = fa_[g_]
+                pos78_ = [m.start() for m in re_.finditer(f"(?={s78_})", u_)]
+                pos27_ = [m.start() for m in re_.finditer(f"(?={s27_}A)", u_) if m.start() >= 1 and u_[m.start() - 1:m.start() + 6] != s78_]
+                got_ = sorted((int(r_["utr_start"]), r_["site_type"]) for r_ in tab_ if r_["gene"] == g_ and r_["mirna_accession"] == m_)
+                exp_ = sorted([(p_ + 1, "8mer" if u_[p_ + 7:p_ + 8] == "A" else "7mer-m8") for p_ in pos78_] + [(p_ + 1, "7mer-A1") for p_ in pos27_])
+                check(got_ == exp_, f"miRNA sites of {m_} in the 3'UTR of {g_}: the table has {got_}, a separate scan finds {exp_}")
+                want_ += len(exp_)
+        check(len(tab_) == want_, f"mirna_site_pairing.csv has {len(tab_)} sites, a separate scan finds {want_}")
+        for r_ in tab_:      # the pair marks recounted from the two sequences
+            m_ = mat_[r_["mirna_accession"]]
+            a1_ = int(r_["a1_position"]) - 1
+            pairs_ = 0
+            for k_ in range(1, len(m_) + 1):
+                p_ = a1_ - (k_ - 1)
+                if 0 <= p_ < len(fa_[r_["gene"]]) and (m_[k_ - 1], fa_[r_["gene"]][p_]) in {("A", "U"), ("U", "A"), ("G", "C"), ("C", "G"), ("G", "U"), ("U", "G")}:
+                    pairs_ += 1
+            check(pairs_ == int(r_["pairs_total"]), f"{r_['mirna']} at {r_['gene']} {r_['utr_start']}: {pairs_} pairs recounted, the table says {r_['pairs_total']}")
+    except FileNotFoundError as exc_:
+        claim(False, f"{exc_.filename} missing; run scripts/49_mirna_site_pairing.py")
 
     # --- 9b. Main-text figures stay inside the journal's artwork limits ---
     # EN | scripts/_journal_fit.py records the size, lettering and line width of every
@@ -1006,7 +1096,7 @@ def main():
         spec_rows = {r["file"]: r for r in csv.DictReader(open("results/tables/journal_figure_spec.csv", encoding="utf-8"))}
         for stem in (# scripts/38_mechanistic_figures.py
                      "mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                     "mech_target_response", "mech_design_space", "mech_series_ranking"):
+                     "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm", "mech_mirna_site_pairing"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem}.{lang_}.png"
                 r_ = spec_rows.get(f_)
@@ -1046,7 +1136,7 @@ def main():
               "(pip install pymupdf) | o contraste e a resolucao de imagem das figuras nao foram medidos")
     if art45 is not None:
         for stem_ in ("mech_model_schematic", "mech_provenance", "mech_alzheimer", "mech_parkinson", "mech_turnover",
-                      "mech_target_response", "mech_design_space", "mech_series_ranking"):
+                      "mech_target_response", "mech_design_space", "mech_series_ranking", "mech_mechanism_algorithm", "mech_mirna_site_pairing"):
             for lang_ in ("en", "pt-BR"):
                 f_ = f"results/figures/{stem_}.{lang_}.pdf"
                 if not os.path.exists(f_):

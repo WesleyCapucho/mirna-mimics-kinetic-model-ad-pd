@@ -12,9 +12,9 @@ This repository holds the data, scripts, tables and figures of a kinetic study o
 - **A design-space map** of the dose needed over repression strength and dosing interval, for nine series.
 - **Structure renders** of four deposited structures (Argonaute 2 with a guide and a target, BACE1, Aβ42 and α-synuclein fibrils), for illustration only.
 
-## Relation to the companion repository
+## Where the scripts were first archived
 
-The companion repository, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas`](https://github.com/WesleyCapucho/-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas) (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256)), holds a systematic review and meta-analysis of circulating miRNAs as diagnostic biomarkers in AD and PD. The two studies share no data and no results. Until this repository was created, the mechanistic scripts lived in the companion repository, so its archived versions up to 1.2.1 still contain them; this repository is their home from now on. Script numbers continue the numbering of the companion repository, so `scripts/12` here is `scripts/12` there.
+The mechanistic scripts were first archived in an earlier repository of the same author (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256), versions up to 1.2.1), which still contains them; this repository is their home from now on. Script numbers continue the numbering of that repository, so `scripts/12` here is `scripts/12` there.
 
 ## Layout
 
@@ -32,6 +32,9 @@ The companion repository, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativ
 │   ├── 40_mimic_design_space.py           # Dose needed over repression strength and dosing interval, nine series
 │   ├── 46_mimic_series_ranking.py         # Which series holds a target down for the longest dosing interval; every threshold and anchor ranked
 │   ├── 47_mimic_series_figure.py          # Figure of the series ranking: renders of the targets above the interval-over-rho plots (main-text figure)
+│   ├── 48_mechanism_algorithm_scheme.py   # Scheme of the molecular mechanism of the two diseases and of the six steps of the algorithm, with renders and small plots drawn from the result tables
+│   ├── 49_mirna_site_pairing.py           # Sequence-level pairing of miR-29, miR-7 and miR-153 with the 3′UTR of BACE1 and SNCA: seed-match sites and pair counts from archived sequences
+│   ├── 50_mirna_site_figure.py            # Figure of the 3′UTRs to scale with the sites opened as duplexes
 │   ├── 39_structure_renders_article2.py   # PyMOL renders of the four structures (illustration only)
 │   ├── 37_manuscript2_numbers.py          # Every number a manuscript quotes, read from the tables (numbers only)
 │   ├── 38_mechanistic_figures.py          # The seven main-text figures, fitted to the journal's artwork limits
@@ -67,13 +70,16 @@ python scripts/39_structure_renders_article2.py   # needs the provenance table o
 python scripts/37_manuscript2_numbers.py           # needs 12, 17, 36, 39 and 40
 python scripts/38_mechanistic_figures.py           # needs 12, 13, 17, 36, 39 and 40
 python scripts/47_mimic_series_figure.py           # needs 39, 40 and 46
+python scripts/48_mechanism_algorithm_scheme.py     # needs 12, 13, 17, 36, 39, 40 and 46
+python scripts/49_mirna_site_pairing.py             # reads data/raw/sequences_2026; add --fetch to download the inputs again
+python scripts/50_mirna_site_figure.py              # needs 49
 python scripts/19_mechanism_animations.py
 python scripts/18_graphical_abstract.py            # needs 12, 17 and 13
 python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # must pass before committing
 ```
 
-`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 966 checks currently pass.
+`scripts/08` enforces the consistency of parameters, model results, the design-space grid, the renders and the figures. 1045 checks currently pass.
 
 ## Limits
 

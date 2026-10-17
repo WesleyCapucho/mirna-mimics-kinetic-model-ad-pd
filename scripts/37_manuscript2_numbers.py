@@ -9,7 +9,7 @@ EN | Gathers every number that the Article 2 manuscript (the mechanistic study) 
      stored here, and refuses to build if a placeholder has no value. A number in the
      manuscript therefore cannot differ from the table it came from.
 
-     Like scripts/35 of the companion repository for Article 1, this script computes nothing new about the models.
+     This script computes nothing new about the models.
      It selects, rounds and counts (half-up rounding) from files already written, and a
      few values that are plain arithmetic on two table entries (a ratio, a percentage,
      a time to 90%) are computed here and labelled as such in "_sources". Each value is
@@ -27,7 +27,7 @@ PT | Reune num arquivo plano, results/tables/manuscript2_numbers.json, todo nume
      marcador nao tiver valor. Um numero do manuscrito nao pode diferir da tabela de onde
      veio.
 
-     Como o scripts/35 do repositorio companheiro para o Artigo 1, este script nao calcula nada novo sobre os
+     Este script nao calcula nada novo sobre os
      modelos. Ele seleciona, arredonda e conta (meio-para-cima) a partir de arquivos ja
      gravados, e uns poucos valores que sao aritmetica simples sobre duas entradas da
      tabela (uma razao, uma porcentagem, um tempo ate 90%) sao calculados aqui e
@@ -575,8 +575,8 @@ iw = ds["interval_within_threshold"]
 
 
 def hours_floor(x):
-    """EN/PT: an interval rounded DOWN (one decimal below 10 h, whole hours from 10 h), so that 'up to X h' stays true."""
-    return lower_bound(x)
+    """EN/PT: an interval rounded to the nearest value (one decimal below 10 h, whole hours from 10 h), as in the figures."""
+    return peak(x)
 
 
 for ax_, sp_, kap_, lab_ in (("PD", "miR-7", kap_a, "a"), ("PD", "miR-7 upper bound", kap_a, "a"), ("PD", "median miRNA", kap_a, "a"),
@@ -633,6 +633,7 @@ must(rk["featured_by_axis"]["AD"]["species"] == ["miR-29c"] and rk["featured_by_
      "the featured series are no longer miR-29c in AD and the upper-bound miR-7 in PD")
 integer("rank.combos", sum(rk["featured_by_axis"][a_]["n_combinations"] for a_ in ("AD", "PD")), RNK_J)
 integer("rank.ties", sum(rk["featured_by_axis"][a_]["n_ties_for_first"] for a_ in ("AD", "PD")), RNK_J)
+integer("rank.combos_single", int(N["rank.combos"]) - int(N["rank.ties"]), RNK_J)
 integer("rank.ref_n", rk["reference_at_least_as_long_as_first_place"]["n"], RNK_J)
 integer("rank.ref_of", rk["reference_at_least_as_long_as_first_place"]["of"], RNK_J)
 must(rk["reference_at_least_as_long_as_first_place"]["n"] == rk["reference_at_least_as_long_as_first_place"]["of"],
@@ -671,6 +672,41 @@ for pdb, key_ in (("5OQV", "a2_abeta42_fibril_end"), ("6CU7", "a2_asyn_fibril_en
     must(len({t_["ca_pairs"] for t_ in lts_}) == 1, f"the two protofilaments of {pdb} are fitted over different numbers of Calpha pairs")
     integer(f"struct.{pdb.lower()}.pairs", lts_[0]["ca_pairs"], REN_J)
 integer("struct.n", 4, PRV_J)
+
+# ----------------------------------------------------------------------------- sequence-level pairing (scripts/49)
+SITE_J = f"{T}/mirna_site_pairing.json"
+SITE_C = f"{T}/mirna_site_pairing.csv"
+sj = json.load(open(SITE_J, encoding="utf-8"))
+sc = list(csv.DictReader(open(SITE_C, encoding="utf-8")))
+put("site.acc_bace1", sj["utr3"]["BACE1"]["transcript"], SITE_J)
+put("site.acc_snca", sj["utr3"]["SNCA"]["transcript"], SITE_J)
+integer("site.len_bace1", sj["utr3"]["BACE1"]["length_nt"], SITE_J)
+integer("site.len_snca", sj["utr3"]["SNCA"]["length_nt"], SITE_J)
+integer("site.n_total", len(sc), SITE_C)
+m29_ = sorted({(int(r_["utr_start"]), r_["site_type"]) for r_ in sc if r_["gene"] == "BACE1" and r_["mirna"].startswith("hsa-miR-29")})
+must(len(m29_) == 2, "the miR-29 family no longer has two sites in the BACE1 3'UTR")
+must(all(len([r_ for r_ in sc if r_["gene"] == "BACE1" and r_["mirna"].startswith("hsa-miR-29") and int(r_["utr_start"]) == st_]) == 3 for st_, _ in m29_),
+     "the three miR-29 paralogues no longer share their sites in the BACE1 3'UTR")
+integer("site.n_m29_bace1", len(m29_), SITE_C)
+for i_, (st_, kd_) in enumerate(m29_, 1):
+    integer(f"site.m29_{i_}_start", st_, SITE_C)
+    en_ = max(int(r_["utr_end"]) for r_ in sc if r_["gene"] == "BACE1" and r_["mirna"].startswith("hsa-miR-29") and int(r_["utr_start"]) == st_)
+    put(f"site.m29_{i_}_pos", f"{st_:,}–{en_:,}", SITE_C)
+    put(f"site.m29_{i_}_type", kd_, SITE_C)
+m7_ = [r_ for r_ in sc if r_["gene"] == "SNCA" and r_["mirna"] == "hsa-miR-7-5p"]
+m153_ = [r_ for r_ in sc if r_["gene"] == "SNCA" and r_["mirna"] == "hsa-miR-153-3p"]
+must(len(m7_) == 1 and m7_[0]["site_type"] == "8mer" and len(m153_) == 1 and m153_[0]["site_type"] == "7mer-m8", "the sites of miR-7 and miR-153 in the SNCA 3'UTR changed")
+put("site.m7_pos", f"{int(m7_[0]['utr_start']):,}–{int(m7_[0]['utr_end']):,}", SITE_C)
+integer("site.m7_pairs", m7_[0]["pairs_total"], SITE_C)
+integer("site.m7_len", m7_[0]["mirna_length_nt"], SITE_C)
+put("site.m153_pos", f"{int(m153_[0]['utr_start']):,}–{int(m153_[0]['utr_end']):,}", SITE_C)
+integer("site.m153_pairs", m153_[0]["pairs_total"], SITE_C)
+integer("site.m153_len", m153_[0]["mirna_length_nt"], SITE_C)
+must(not [r_ for r_ in sc if r_["gene"] == "SNCA" and r_["mirna"].startswith("hsa-miR-29")], "a miR-29 site appeared in the SNCA 3'UTR")
+integer("site.n_m7_bace1", len([r_ for r_ in sc if r_["gene"] == "BACE1" and r_["mirna"] == "hsa-miR-7-5p"]), SITE_C)
+must(not [r_ for r_ in sc if r_["gene"] == "BACE1" and r_["mirna"] == "hsa-miR-153-3p"], "a miR-153 site appeared in the BACE1 3'UTR")
+ccx_ = sj["inputs"]["sha256"]
+put("site.refseq_mane", "MANE Select", SITE_J)
 
 # ----------------------------------------------------------------------------- write
 payload = dict(N)

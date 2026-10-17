@@ -208,7 +208,7 @@ def fig_alzheimer(d, lang):
                     fontsize=6.6, color=vs.INK, va="center", ha="left", linespacing=1.1)
         vm.halo(t)
         ax.text(cx, top_h - 0.3, name, ha="center", va="top", fontsize=7.4, fontweight="bold", color=vs.INK)
-    ax.text(centres[2], 0.0, tr(lang, "the lever of a miR-29 mimic", "a alavanca de um mimético de miR-29"),
+    ax.text(centres[2], 0.0, tr(lang, "what a production-side mimic would restore", "o que um mimético do lado da produção restauraria"),
             ha="center", va="bottom", fontsize=6.6, color=vs.TIER_RAMP[0], style="italic")
     ax.text(centres[1] + TW / 2 + 1.2, base_y + unit_h + 0.6, tr(lang, "control\nlevel", "nível do\ncontrole"),
             fontsize=6.6, color=vs.INK2, ha="left", va="bottom", linespacing=1.1)
@@ -392,7 +392,7 @@ def fig_parkinson(d, lang):
     ax.set_yticklabels(["1", "2", "5", "10", "20", "50", "100"])
     ax.set_xlabel(tr(lang, "ρ, miRNA-driven over intrinsic mRNA decay", "ρ, decaimento do mRNA pelo miRNA sobre o intrínseco"))
     ax.set_ylabel(tr(lang, "Mimic factor required", "Fator de mimético exigido"))
-    ax.legend(frameon=False, fontsize=6.8, loc="upper right", handlelength=1.8, ncol=1, borderaxespad=0.3)
+    ax.legend(frameon=False, fontsize=6.8, loc="lower left", handlelength=1.8, ncol=1, borderaxespad=0.3)
     ax.set_title(tr(lang, "How much mimic, by repression strength", "Quanto mimético, por força de repressão"), fontsize=8, loc="left")
     style_axes(ax)
     label_panel(ax, "c", x=-0.17)
@@ -630,7 +630,7 @@ def fig_target(d, lang, t36):
     label_panel(axs[0], "a")
 
     # ------------------------------------------------------------------ (b) and (c): peak against interval, ribbons over the scan
-    def peak_panel(ax, axis, items, kap, title, letter, floor_case=None):
+    def peak_panel(ax, axis, items, kap, title, letter, floor_case=None, ymax=None):
         for sp, colour, ls in items:
             lo, mid_, hi = [], [], []
             for T in intervals:
@@ -656,9 +656,13 @@ def fig_target(d, lang, t36):
         ax.set_xscale("log")
         ax.set_xticks(intervals)
         ax.set_xticklabels(["8", "12", "24", "48", "168"])
-        ax.set_ylim(1, cap * 2)
-        ax.set_yticks([1, 10, 100, 1000, 10000])
-        ax.set_yticklabels(["1", "10", "100", "1000", "10⁴"])
+        ax.set_ylim(1, ymax or cap * 2)
+        if ymax:
+            ax.set_yticks([1, 10, 100])
+            ax.set_yticklabels(["1", "10", "100"])
+        else:
+            ax.set_yticks([1, 10, 100, 1000, 10000])
+            ax.set_yticklabels(["1", "10", "100", "1000", "10⁴"])
         ax.set_xlabel(tr(lang, "Dosing interval (h)", "Intervalo entre doses (h)"))
         ax.set_ylabel(tr(lang, "Peak of the repressor pool (× baseline)", "Pico do pool do repressor (× basal)"))
         ax.set_title(title, fontsize=8, loc="left")
@@ -677,7 +681,7 @@ def fig_target(d, lang, t36):
     ax = fig.add_subplot(outer[1, 0])
     peak_panel(ax, "AD", [("miR-29b", vs.AD, "-"), ("miR-29c", vs.AD, "--"), ("median miRNA", vs.TIER_RAMP[0], "-")], kap_ad,
                tr(lang, f"AD, {100 * kap_ad:.1f}% fall: scan band and midpoint", f"DA, queda de {100 * kap_ad:.1f}%: faixa da varredura e ponto médio"),
-               "c")
+               "c", ymax=300)
     ax.legend([plt.Line2D([], [], color=c, ls=ls, lw=1.4) for c, ls in ((vs.AD, "-"), (vs.AD, "--"), (vs.TIER_RAMP[0], "-"))],
               [tr(lang, *SP_COLOUR[s][2:]) for s in ("miR-29b", "miR-29c", "median miRNA")],
               frameon=False, fontsize=6.6, loc="upper left", handlelength=1.8, borderaxespad=0.2)
@@ -698,7 +702,7 @@ def fig_target(d, lang, t36):
     ax.set_xscale("log")
     ax.set_xticks(intervals)
     ax.set_xticklabels(["8", "12", "24", "48", "168"])
-    ax.set_ylim(-0.46, 1.04)
+    ax.set_ylim(-0.04, 1.04)
     ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
     ax.set_xlabel(tr(lang, "Dosing interval (h)", "Intervalo entre doses (h)"))
     ax.set_ylabel(tr(lang, "Efficiency", "Eficiência"))
@@ -711,7 +715,7 @@ def fig_target(d, lang, t36):
                plt.Line2D([], [], color=vs.TIER_RAMP[0], ls="-", lw=1.4)],
               [tr(lang, "PD miR-7", "DP miR-7"), tr(lang, "PD miR-7 (5 h)", "DP miR-7 (5 h)"), tr(lang, "PD median", "DP mediano"),
                tr(lang, "AD miR-29b", "DA miR-29b"), tr(lang, "AD miR-29c", "DA miR-29c"), tr(lang, "AD median", "DA mediano")],
-              frameon=False, fontsize=6.5, loc="lower left", ncol=2, handlelength=1.8, columnspacing=1.4, borderaxespad=0.15,
+              frameon=False, fontsize=6.5, loc="upper center", bbox_to_anchor=(0.5, -0.20), ncol=3, handlelength=1.8, columnspacing=1.2,
               labelspacing=0.35)
 
     fig.savefig(fig_path(FIG, "mech_target_response", lang), dpi=DPI, bbox_inches="tight")
@@ -809,9 +813,24 @@ def fig_design(d, lang):
             ax.contourf(Rf, Tf, near.astype(float), levels=[0.5, 1.5], colors="none", hatches=["//////"], zorder=2)
         cs = ax.contour(Rf, Tf, Zf, levels=levels, colors=[vs.INK], linewidths=0.5, zorder=4)
         if k % 3 == 0:
-            lab = ax.clabel(cs, levels=[10, 100], fmt=lambda v: f"{v:g}×", fontsize=6.5, inline=True, inline_spacing=2)
-            for t_ in lab:
-                vm.halo(t_, 1.6)
+            spots = []      # EN/PT: one spot per level, on the stretch nearest rho = 0.03 and clear of the 24 h and 168 h lines | um ponto por nivel
+            for li_, lv_ in enumerate(cs.levels):
+                if lv_ not in (10, 100):
+                    continue
+                best = None
+                for seg_ in cs.allsegs[li_]:
+                    for x_, y_ in seg_:
+                        if min(abs(math.log(y_ / 24.0)), abs(math.log(y_ / 168.0))) < 0.25 or not (3.0 < y_ < 150.0):
+                            continue
+                        dx_ = abs(math.log10(x_) - math.log10(0.03))
+                        if best is None or dx_ < best[0]:
+                            best = (dx_, x_, y_)
+                if best:
+                    spots.append((best[1], best[2]))
+            if spots:
+                lab = ax.clabel(cs, levels=[10, 100], fmt=lambda v: f"{v:g}×", fontsize=6.5, inline=True, inline_spacing=2, manual=spots)
+                for t_ in lab:
+                    vm.halo(t_, 1.6)
         for T_ in (24.0, 168.0):
             ax.axhline(T_, color="white", lw=1.5, zorder=5)
             ax.axhline(T_, color=vs.INK, lw=0.55, ls=(0, (3, 2)), zorder=5)

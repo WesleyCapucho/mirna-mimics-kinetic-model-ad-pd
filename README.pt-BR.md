@@ -12,9 +12,9 @@ Este repositório guarda os dados, scripts, tabelas e figuras de um estudo ciné
 - **Um mapa do espaço de projeto** da dose necessária sobre a força de repressão e o intervalo de dose, para nove séries.
 - **Renders de estrutura** de quatro estruturas depositadas (Argonauta 2 com guia e alvo, BACE1, fibrilas de Aβ42 e de α-sinucleína), só para ilustração.
 
-## Relação com o repositório companheiro
+## Onde os scripts foram arquivados primeiro
 
-O repositório companheiro, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas`](https://github.com/WesleyCapucho/-Epigen-tica-e-micrornas-em-doen-as-neurodegenerativas) (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256)), guarda uma revisão sistemática e meta-análise de miRNAs circulantes como biomarcadores diagnósticos na DA e na DP. Os dois estudos não compartilham dados nem resultados. Até este repositório existir, os scripts mecanísticos ficavam no companheiro, então as versões arquivadas dele até a 1.2.1 ainda os contêm; daqui em diante este é o lugar deles. A numeração dos scripts continua a do repositório companheiro: o `scripts/12` daqui é o `scripts/12` de lá.
+Os scripts mecanísticos foram arquivados primeiro num repositório anterior do mesmo autor (Zenodo, [10.5281/zenodo.23438256](https://doi.org/10.5281/zenodo.23438256), versões até a 1.2.1), que ainda os contém; daqui em diante este é o lugar deles. A numeração dos scripts continua a desse repositório: o `scripts/12` daqui é o `scripts/12` de lá.
 
 ## Estrutura
 
@@ -32,6 +32,9 @@ O repositório companheiro, [`-Epigen-tica-e-micrornas-em-doen-as-neurodegenerat
 │   ├── 40_mimic_design_space.py           # Dose necessária sobre força de repressão e intervalo de dose, nove séries
 │   ├── 46_mimic_series_ranking.py         # Qual série mantém um alvo baixo pelo maior intervalo de dose; todo limiar e toda âncora ordenados
 │   ├── 47_mimic_series_figure.py          # Figura da ordenação das séries: renders dos alvos acima dos gráficos de intervalo sobre rho (figura do texto principal)
+│   ├── 48_mechanism_algorithm_scheme.py   # Esquema do mecanismo molecular das duas doenças e dos seis passos do algoritmo, com renders e gráficos pequenos desenhados das tabelas de resultado
+│   ├── 49_mirna_site_pairing.py           # Pareamento, em nível de sequência, do miR-29, miR-7 e miR-153 com o 3′UTR de BACE1 e SNCA: sítios de semente e contagem de pares a partir de sequências arquivadas
+│   ├── 50_mirna_site_figure.py            # Figura dos 3′UTR em escala, com os sítios abertos como duplex
 │   ├── 39_structure_renders_article2.py   # Renders do PyMOL das quatro estruturas (só ilustração)
 │   ├── 37_manuscript2_numbers.py          # Todo número que um manuscrito cita, lido das tabelas (só números)
 │   ├── 38_mechanistic_figures.py          # As sete figuras do texto principal, ajustadas aos limites de arte da revista
@@ -67,13 +70,16 @@ python scripts/39_structure_renders_article2.py   # precisa da tabela de proveni
 python scripts/37_manuscript2_numbers.py           # precisa do 12, 17, 36, 39 e 40
 python scripts/38_mechanistic_figures.py           # precisa do 12, 13, 17, 36, 39 e 40
 python scripts/47_mimic_series_figure.py           # precisa do 39, 40 e 46
+python scripts/48_mechanism_algorithm_scheme.py     # precisa do 12, 13, 17, 36, 39, 40 e 46
+python scripts/49_mirna_site_pairing.py             # lê data/raw/sequences_2026; com --fetch baixa as entradas de novo
+python scripts/50_mirna_site_figure.py              # precisa do 49
 python scripts/19_mechanism_animations.py
 python scripts/18_graphical_abstract.py            # precisa do 12, 17 e 13
 python scripts/20_structure_story_panel.py
 python scripts/08_verify_consistency.py            # tem de passar antes de versionar
 ```
 
-O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 966 verificacoes passam.
+O `scripts/08` faz cumprir a consistência dos parâmetros, dos resultados dos modelos, da grade do espaço de projeto, das renders e das figuras. Atualmente 1045 verificacoes passam.
 
 ## Limites
 

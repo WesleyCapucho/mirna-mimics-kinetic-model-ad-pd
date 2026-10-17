@@ -1,0 +1,120 @@
+{
+ "inputs": {
+  "provenance": {
+   "mature": {
+    "url": "https://mirbase.org/download/mature.fa",
+    "bytes": 6127225,
+    "sha256_whole_file": "52d69eeb3c23c5ed0f66c8c9f24e1ad2cd94cc34e72e4fc376c0dd438d2779ff",
+    "last_modified": null,
+    "note": "mature.fa from mirbase.org; the file does not state the release"
+   },
+   "refseq": {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={acc}&rettype=gb&retmode=text",
+    "records": {
+     "NM_012104.6": {
+      "gene": "BACE1",
+      "mane_select": true,
+      "cds": [
+       462,
+       1967
+      ],
+      "transcript_length": 5835,
+      "utr3_length": 3868
+     },
+     "NM_000345.4": {
+      "gene": "SNCA",
+      "mane_select": true,
+      "cds": [
+       226,
+       648
+      ],
+      "transcript_length": 3177,
+      "utr3_length": 2529
+     }
+    }
+   }
+  },
+  "sha256": {
+   "NM_012104.6.gb": "a4a4506bf97ce302378b77db4acc149e159f170a58b72b7d6ab84d2cbbbed1f1",
+   "NM_000345.4.gb": "8dd11059a29c296b3e6d3a1afd1e5bf3961f536040f92c10c077cc12449cd4df",
+   "BACE1": "db7f175c5c04c96e3af4329dd276896d6f2d1cf1fbe2b9fccfcd93658ae705f2",
+   "SNCA": "927302e7f366c620f394924265873ec41d34a2002ae2e3c3fe7282ac814eb37b",
+   "mirbase_mature_selected.fa": "2e539d2936f924cb4e4f562af350d479dfd264e6261fe40104f45f86822b7dd1",
+   "refGene_selected.tsv": "210b3d462ad09c4e89ff06775b0f2b880dac10dd604fa65402cbc3caba3dc2da"
+  }
+ },
+ "utr3": {
+  "BACE1": {
+   "transcript": "NM_012104.6",
+   "length_nt": 3868,
+   "cds": [
+    462,
+    1967
+   ],
+   "transcript_length_nt": 5835,
+   "header": "BACE1|NM_012104.6|3UTR|1968-5835 of the record|NCBI RefSeq (MANE Select)"
+  },
+  "SNCA": {
+   "transcript": "NM_000345.4",
+   "length_nt": 2529,
+   "cds": [
+    226,
+    648
+   ],
+   "transcript_length_nt": 3177,
+   "header": "SNCA|NM_000345.4|3UTR|649-3177 of the record|NCBI RefSeq (MANE Select)"
+  }
+ },
+ "mirna": {
+  "hsa-miR-29a-3p": {
+   "accession": "MIMAT0000086",
+   "mirbase_name": "hsa-miR-29a-3p",
+   "sequence": "UAGCACCAUCUGAAAUCGGUUA",
+   "seed_2_8": "AGCACCA",
+   "site_motif_8mer": "UGGUGCUA"
+  },
+  "hsa-miR-29b-3p": {
+   "accession": "MIMAT0000100",
+   "mirbase_name": "hsa-miR-29b-3p",
+   "sequence": "UAGCACCAUUUGAAAUCAGUGUU",
+   "seed_2_8": "AGCACCA",
+   "site_motif_8mer": "UGGUGCUA"
+  },
+  "hsa-miR-29c-3p": {
+   "accession": "MIMAT0000681",
+   "mirbase_name": "hsa-miR-29c-3p",
+   "sequence": "UAGCACCAUUUGAAAUCGGUUA",
+   "seed_2_8": "AGCACCA",
+   "site_motif_8mer": "UGGUGCUA"
+  },
+  "hsa-miR-7-5p": {
+   "accession": "MIMAT0000252",
+   "mirbase_name": "hsa-miR-7-5p",
+   "sequence": "UGGAAGACUAGUGAUUUUGUUGUU",
+   "seed_2_8": "GGAAGAC",
+   "site_motif_8mer": "GUCUUCCA"
+  },
+  "hsa-miR-153-3p": {
+   "accession": "MIMAT0000439",
+   "mirbase_name": "hsa-miR-153-1-3p",
+   "sequence": "UUGCAUAGUCACAAAAGUGAUC",
+   "seed_2_8": "UGCAUAG",
+   "site_motif_8mer": "CUAUGCAA"
+  }
+ },
+ "n_sites": 10,
+ "sites_by_pair": {
+  "BACE1|hsa-miR-29a-3p": 2,
+  "BACE1|hsa-miR-29b-3p": 2,
+  "BACE1|hsa-miR-29c-3p": 2,
+  "BACE1|hsa-miR-7-5p": 2,
+  "BACE1|hsa-miR-153-3p": 0,
+  "SNCA|hsa-miR-29a-3p": 0,
+  "SNCA|hsa-miR-29b-3p": 0,
+  "SNCA|hsa-miR-29c-3p": 0,
+  "SNCA|hsa-miR-7-5p": 1,
+  "SNCA|hsa-miR-153-3p": 1
+ },
+ "pair_convention": "nucleotide k of the microRNA faces 3'UTR position a1 - (k - 1); Watson-Crick and G-U pairs; no gaps",
+ "position_convention": "1-based from the first nucleotide after the CDS of the RefSeq record"
+}
