@@ -1,0 +1,235 @@
+{
+ "generated_on": "2026-10-14",
+ "software": {
+  "python": "3.11.17",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1"
+ },
+ "integration": "LSODA via scipy.integrate.solve_ivp, rtol 1e-10, atol 1e-13; periodic state from the affine one-cycle map; cycle averages integrated as states",
+ "dose_cap_in_baseline_pools": 10000.0,
+ "intervals_h": [
+  8.0,
+  12.0,
+  24.0,
+  48.0,
+  168.0
+ ],
+ "scenarios": 330,
+ "scenarios_unreachable": 24,
+ "repression_strength": {
+  "AD": {
+   "n_species": 3,
+   "d_mRNA_per_hour": 0.04556472,
+   "rho_scan_low": 6.584041337245132,
+   "rho_scan_mid": 36.062279599556376,
+   "rho_scan_high": 197.52124011735393,
+   "targets": {
+    "required to restore control Abeta42 [K001-K004]": {
+     "knockdown": 0.29206539074960136,
+     "proportional_limit_fold": 1.4125598422979444,
+     "fold_at_scan_low": 1.4752204212897777,
+     "fold_at_scan_mid": 1.4240000464913316,
+     "fold_at_scan_high": 1.4146485282643388
+    }
+   }
+  },
+  "PD": {
+   "n_species": 1,
+   "d_mRNA_per_hour": 0.1061904,
+   "rho_scan_low": 0.9417047115370127,
+   "rho_scan_mid": 5.157929130177174,
+   "rho_scan_high": 28.25114134611038,
+   "targets": {
+    "miR-7 alone, SNCA construct with 3'UTR [K058]": {
+     "knockdown": 0.3,
+     "proportional_limit_fold": 1.4285714285714286,
+     "fold_at_scan_low": 1.883673142857143,
+     "fold_at_scan_mid": 1.5116612535292808,
+     "fold_at_scan_high": 1.4437414857142858,
+     "fold_at_floor": 2.4025974025974026
+    },
+    "miR-7 + miR-153, cortical neurons [K063]": {
+     "knockdown": 0.43,
+     "proportional_limit_fold": 1.7543859649122806,
+     "fold_at_scan_low": 2.5554714385964914,
+     "fold_at_scan_mid": 1.900643493054465,
+     "fold_at_scan_high": 1.7810888140350878,
+     "fold_at_floor": 3.4688995215311005
+    }
+   },
+   "rho_floor_K065": 0.44,
+   "floor_below_scan": true,
+   "note_en": "K065: blocking endogenous miR-7 and miR-153 with antisense oligonucleotides raised an SNCA 3'UTR reporter by 44% in rat cortical neurons. For a repressor whose baseline decay of the mRNA is rho times the intrinsic decay, removing all of it raises the level by 1 + rho, and a blockade cannot be more than complete, so rho is at least 0.44 for the pair: a floor, not an estimate. Reporter, not endogenous gene; two miRNAs lumped, so nothing is said about miR-7 alone; the only loss-of-function observation in the table.",
+   "note_pt": "K065: bloquear miR-7 e miR-153 endogenos com oligonucleotideos antisense elevou em 44% um repórter da 3'UTR de SNCA em neuronios corticais de rato. Para um repressor cujo decaimento basal do mRNA vale rho vezes o decaimento intrinseco, retirar tudo dele eleva o nivel por 1 + rho, e um bloqueio nao pode passar de completo, entao rho e no minimo 0,44 para o par: um piso, nao uma estimativa. Repórter, nao gene endogeno; dois miRNAs agrupados, entao nada se diz do miR-7 sozinho; a unica observacao de perda de funcao da tabela."
+  }
+ },
+ "rho_sweep": {
+  "interval_h": 24.0,
+  "rho_min": 0.01,
+  "rho_max": 10000.0,
+  "points": 31,
+  "summary": [
+   {
+    "axis": "AD",
+    "species": "miR-29b",
+    "target": "required to restore control Abeta42 [K001-K004]",
+    "target_knockdown": 0.29206539074960136,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 2.2307803849818066,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 110.67618580341149,
+    "peak_at_highest_rho": 2.2307803849818066,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "AD",
+    "species": "miR-29c",
+    "target": "required to restore control Abeta42 [K001-K004]",
+    "target_knockdown": 0.29206539074960136,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 1.8669477526910143,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 83.76645562930838,
+    "peak_at_highest_rho": 1.8669477526910143,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "AD",
+    "species": "median miRNA",
+    "target": "required to restore control Abeta42 [K001-K004]",
+    "target_knockdown": 0.29206539074960136,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 1.5247783756695545,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 53.70204034762224,
+    "peak_at_highest_rho": 1.5247783756695545,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "miR-7",
+    "target": "miR-7 alone, SNCA construct with 3'UTR [K058]",
+    "target_knockdown": 0.3,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 14.535304762922328,
+    "rho_at_min": 1.584893192461114,
+    "peak_at_lowest_rho": 498.51564069626653,
+    "peak_at_highest_rho": 18.851855744719067,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "miR-7",
+    "target": "miR-7 + miR-153, cortical neurons [K063]",
+    "target_knockdown": 0.43,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 45.9918342826437,
+    "rho_at_min": 1.0,
+    "peak_at_lowest_rho": 1099.9485867056144,
+    "peak_at_highest_rho": 67.45492183502377,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "miR-7 upper bound",
+    "target": "miR-7 alone, SNCA construct with 3'UTR [K058]",
+    "target_knockdown": 0.3,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 2.8981811420819867,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 156.39152981743297,
+    "peak_at_highest_rho": 2.8981811420819867,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "miR-7 upper bound",
+    "target": "miR-7 + miR-153, cortical neurons [K063]",
+    "target_knockdown": 0.43,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 4.743505588516507,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 285.6755460472917,
+    "peak_at_highest_rho": 4.743505588516507,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "median miRNA",
+    "target": "miR-7 alone, SNCA construct with 3'UTR [K058]",
+    "target_knockdown": 0.3,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 1.5452320648133298,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 55.791087943065286,
+    "peak_at_highest_rho": 1.5452320648133298,
+    "unreachable_points": 0
+   },
+   {
+    "axis": "PD",
+    "species": "median miRNA",
+    "target": "miR-7 + miR-153, cortical neurons [K063]",
+    "target_knockdown": 0.43,
+    "interval_h": 24.0,
+    "min_peak_pool_over_baseline": 1.9622250083755843,
+    "rho_at_min": 10000.0,
+    "peak_at_lowest_rho": 97.53683159392664,
+    "peak_at_highest_rho": 1.9622250083755843,
+    "unreachable_points": 0
+   }
+  ]
+ },
+ "nucleation_scaling": {
+  "monomer_ratio_AD_over_control": 1.4125598422979444,
+  "required_monomer_reduction": 0.29206539074960136,
+  "order_primary_nucleation": 2.0,
+  "order_secondary_nucleation": 2.0,
+  "primary_nucleation_rate_ratio_AD_over_control": 1.9953253080727935,
+  "secondary_nucleation_rate_ratio_AD_over_control": 1.9953253080727935,
+  "primary_nucleation_rate_reduction_after_offset": 0.49882858902548544,
+  "secondary_nucleation_rate_reduction_after_offset": 0.49882858902548544,
+  "elongation_rate_ratio_AD_over_control": 1.4125598422979444,
+  "note_en": "Ratios of rates at two monomer levels depend on the reaction orders only, so they do not need the Abeta42 rate constants that no source gives (K037). In vitro orders applied to a brain monomer pool: a scaling, not a rate.",
+  "note_pt": "Razoes de taxas em dois niveis de monomero dependem so das ordens de reacao, entao nao precisam das constantes de velocidade do Abeta42 que nenhuma fonte da (K037). Ordens in vitro aplicadas a um pool cerebral de monomero: um escalonamento, nao uma taxa."
+ },
+ "verification": {
+  "linear_limit": {
+   "max_abs_error": 5.621437454310128e-05,
+   "tolerance": 0.001,
+   "passed": true,
+   "note": "relative error of the knockdown at D = 1e-4"
+  },
+  "peak_over_mean_vs_scripts_17": {
+   "max_abs_error": 3.552713678800501e-15,
+   "tolerance": 1e-12,
+   "passed": true,
+   "note": "Epeak / Emean against scripts/17 peak_to_average"
+  },
+  "continuous_limit": {
+   "max_abs_error": 1.7824995368620478e-09,
+   "tolerance": 0.001,
+   "passed": true,
+   "note": "knockdown at T = 0.05 h with the closed-form mean excess"
+  },
+  "brute_force_cycles": {
+   "max_abs_error": 6.821172515714125e-10,
+   "tolerance": 1e-05,
+   "passed": true,
+   "note": "mean knockdown of cycle 120 from the untreated state, trapezoid on 4001 points"
+  },
+  "script12_constant_exposure": {
+   "max_abs_error": 1.8810364377230826e-10,
+   "tolerance": 1e-06,
+   "passed": true,
+   "note": "BACE1 protein ratio at the closed-form mimic factor against 1 - kappa"
+  },
+  "same_formula_as_script12": {
+   "max_abs_error": 0.0,
+   "tolerance": 1e-12,
+   "passed": true,
+   "note": "scripts/12 mimic_for_knockdown against 1 + required_excess"
+  }
+ },
+ "assumptions_en": "The delivered mimic is cleared at the first-order rate of the endogenous species (K016-K021) and enters the repressor pool instantly. Repression is mass action: linear in the miRNA, saturating only through depletion of the mRNA. The delivered species acts like the endogenous pool, molecule for molecule. The three miR-29 paralogues start at equal levels and are pooled; miR-153 is lumped with miR-7. k_translate cancels, and k_repress enters through rho alone.",
+ "assumptions_pt": "O mimetico entregue e eliminado na taxa de primeira ordem da especie endogena (K016-K021) e entra no pool do repressor instantaneamente. A repressao e acao de massas: linear no miRNA, saturando so pelo esgotamento do mRNA. A especie entregue age como o pool endogeno, molecula por molecula. Os tres paralogos de miR-29 comecam em niveis iguais e sao agrupados; o miR-153 e agrupado com o miR-7. O k_translate se cancela, e o k_repress entra so por rho."
+}

@@ -1,0 +1,100 @@
+axis,target,target_knockdown,species,param_id,half_life_h,anchor,rho,threshold_x,interval_h,flag,reference,rank_among_studied
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan high,197.5212,3,54.14,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan high,197.5212,3,36.05,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan high,197.5212,3,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan low,6.584,3,50.91,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan low,6.584,3,34.37,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan low,6.584,3,159.3,interp,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan midpoint,36.0623,3,53.64,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan midpoint,36.0623,3,35.84,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan midpoint,36.0623,3,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan high,197.5212,10,120.27,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan high,197.5212,10,78.74,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan high,197.5212,10,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan low,6.584,10,117.51,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan low,6.584,10,78.44,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan low,6.584,10,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan midpoint,36.0623,10,119.9,interp,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan midpoint,36.0623,10,78.71,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan midpoint,36.0623,10,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan high,197.5212,30,168.0,beyond,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan high,197.5212,30,117.35,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan high,197.5212,30,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan low,6.584,30,168.0,beyond,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan low,6.584,30,117.45,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan low,6.584,30,168.0,beyond,True,
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29c,K018,10.6,scan midpoint,36.0623,30,168.0,beyond,False,1
+AD,required to restore control Abeta42 [K001-K004],0.2921,miR-29b,K017,7.0,scan midpoint,36.0623,30,117.39,interp,False,2
+AD,required to restore control Abeta42 [K001-K004],0.2921,median miRNA,K016,34.0,scan midpoint,36.0623,30,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,K065 floor,0.44,3,5.38,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,K065 floor,0.44,3,0.0,none,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,K065 floor,0.44,3,36.41,interp,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan high,28.2511,3,24.49,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan high,28.2511,3,8.46,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan high,28.2511,3,165.38,interp,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan low,0.9417,3,13.49,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan low,0.9417,3,4.65,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan low,0.9417,3,85.83,interp,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,3,22.69,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan midpoint,5.1579,3,8.28,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan midpoint,5.1579,3,148.68,interp,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,K065 floor,0.44,10,36.74,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,K065 floor,0.44,10,14.5,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,K065 floor,0.44,10,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan high,28.2511,10,54.6,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan high,28.2511,10,18.88,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan high,28.2511,10,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan low,0.9417,10,45.56,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan low,0.9417,10,19.1,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan low,0.9417,10,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,10,53.14,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan midpoint,5.1579,10,19.65,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan midpoint,5.1579,10,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,K065 floor,0.44,30,64.75,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,K065 floor,0.44,30,29.49,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,K065 floor,0.44,30,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan high,28.2511,30,80.65,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan high,28.2511,30,27.89,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan high,28.2511,30,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan low,0.9417,30,72.91,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan low,0.9417,30,30.97,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan low,0.9417,30,168.0,beyond,True,
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,30,79.34,interp,False,1
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,miR-7,K020,1.7,scan midpoint,5.1579,30,28.91,interp,False,2
+PD,"miR-7 alone, SNCA construct with 3'UTR [K058]",0.3,median miRNA,K016,34.0,scan midpoint,5.1579,30,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,K065 floor,0.44,3,0.0,none,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,K065 floor,0.44,3,0.0,none,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,K065 floor,0.44,3,0.0,none,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan high,28.2511,3,13.84,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan high,28.2511,3,4.73,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan high,28.2511,3,94.2,interp,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan low,0.9417,3,3.76,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan low,0.9417,3,0.0,none,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan low,0.9417,3,25.17,interp,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,3,12.24,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan midpoint,5.1579,3,4.34,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan midpoint,5.1579,3,79.41,interp,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,K065 floor,0.44,10,22.53,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,K065 floor,0.44,10,8.4,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,K065 floor,0.44,10,134.23,interp,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan high,28.2511,10,37.38,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan high,28.2511,10,12.87,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan high,28.2511,10,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan low,0.9417,10,30.17,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan low,0.9417,10,12.13,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan low,0.9417,10,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,10,36.39,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan midpoint,5.1579,10,13.23,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan midpoint,5.1579,10,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,K065 floor,0.44,30,43.91,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,K065 floor,0.44,30,19.42,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,K065 floor,0.44,30,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan high,28.2511,30,56.36,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan high,28.2511,30,19.45,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan high,28.2511,30,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan low,0.9417,30,50.21,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan low,0.9417,30,21.03,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan low,0.9417,30,168.0,beyond,True,
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7 upper bound,K021,5.0,scan midpoint,5.1579,30,55.33,interp,False,1
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,miR-7,K020,1.7,scan midpoint,5.1579,30,20.14,interp,False,2
+PD,"miR-7 + miR-153, cortical neurons [K063]",0.43,median miRNA,K016,34.0,scan midpoint,5.1579,30,168.0,beyond,True,

@@ -1,0 +1,73 @@
+{
+ "model": "steady-state repeated dosing of a species cleared with first-order constant d: peak/average = dT / (1 - exp(-dT)), independent of dose",
+ "reference_species": "median miRNA",
+ "decay_constants": {
+  "miR-7": {
+   "param_id": "K020",
+   "decay_per_hour": 0.407734,
+   "half_life_hours": 1.6999984807740962
+  },
+  "miR-7 upper bound": {
+   "param_id": "K021",
+   "decay_per_hour": 0.138629,
+   "half_life_hours": 5.00001572946458
+  },
+  "miR-29b": {
+   "param_id": "K017",
+   "decay_per_hour": 0.099021,
+   "half_life_hours": 7.000001823451039
+  },
+  "miR-29c": {
+   "param_id": "K018",
+   "decay_per_hour": 0.0653912,
+   "half_life_hours": 10.6000070431487
+  },
+  "median miRNA": {
+   "param_id": "K016",
+   "decay_per_hour": 0.0203867,
+   "half_life_hours": 33.99996961548192
+  }
+ },
+ "daily_dosing_comparison": {
+  "miR-7": {
+   "half_life_hours": 1.7,
+   "peak_over_average_daily": 9.7862,
+   "reference_peak_over_average_daily": 1.2645,
+   "penalty_versus_reference": 7.7391,
+   "interval_matching_reference_penalty_hours": 1.2,
+   "half_life_required_for_daily_dosing_hours": 34.0,
+   "fold_stabilisation_required": 20.0
+  },
+  "miR-7 upper bound": {
+   "half_life_hours": 5.0,
+   "peak_over_average_daily": 3.451,
+   "reference_peak_over_average_daily": 1.2645,
+   "penalty_versus_reference": 2.7291,
+   "interval_matching_reference_penalty_hours": 3.5294,
+   "half_life_required_for_daily_dosing_hours": 34.0,
+   "fold_stabilisation_required": 6.8
+  },
+  "miR-29b": {
+   "half_life_hours": 7.0,
+   "peak_over_average_daily": 2.6198,
+   "reference_peak_over_average_daily": 1.2645,
+   "penalty_versus_reference": 2.0718,
+   "interval_matching_reference_penalty_hours": 4.9412,
+   "half_life_required_for_daily_dosing_hours": 34.0,
+   "fold_stabilisation_required": 4.8571
+  },
+  "miR-29c": {
+   "half_life_hours": 10.6,
+   "peak_over_average_daily": 1.982,
+   "reference_peak_over_average_daily": 1.2645,
+   "penalty_versus_reference": 1.5674,
+   "interval_matching_reference_penalty_hours": 7.4824,
+   "half_life_required_for_daily_dosing_hours": 34.0,
+   "fold_stabilisation_required": 3.2075
+  }
+ },
+ "assumption_en": "The delivered mimic is assumed to be cleared at the same first-order rate as the endogenous species. A chemically stabilised mimic would not be, which is why the result is stated as a required fold stabilisation: it is a design target, not a verdict on feasibility.",
+ "assumption_pt": "Supoe-se que o mimetico entregue seja eliminado na mesma taxa de primeira ordem da especie endogena. Um mimetico quimicamente estabilizado nao seria, e por isso o resultado e enunciado como fator de estabilizacao necessario: e meta de projeto, nao veredito de viabilidade.",
+ "reading_en": "Dosed once a day, a miR-7 mimic that turns over like endogenous miR-7 must reach a peak roughly eight times higher than a mimic of an ordinary miRNA to hold the same average level, and it spends about 7% of each day above half its own peak. To be dosed daily on the same terms as an ordinary miRNA its half-life would have to rise twentyfold, from 1.7 h to about 34 h. The miR-29 paralogues sit between the two, and differ from each other, which is a further reason not to treat the family as one agent.",
+ "reading_pt": "Dosado uma vez por dia, um mimetico de miR-7 que se renova como o miR-7 endogeno precisa atingir um pico cerca de oito vezes maior que o mimetico de um miRNA comum para sustentar o mesmo nivel medio, e passa cerca de 7% de cada dia acima da metade do proprio pico. Para ser dosado diariamente nas mesmas condicoes de um miRNA comum, sua meia-vida teria de subir vinte vezes, de 1,7 h para cerca de 34 h. Os parálogos de miR-29 ficam entre os dois, e diferem entre si, o que e mais uma razao para nao tratar a familia como um agente so."
+}

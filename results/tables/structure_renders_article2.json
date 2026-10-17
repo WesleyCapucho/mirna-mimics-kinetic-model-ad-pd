@@ -1,0 +1,127 @@
+{
+ "_note_en": "Illustration of the molecules at the steps of the models; not a result. The translucent layer past the last chain of each fibril is constructed (see the script docstring).",
+ "_note_pt": "Ilustracao das moleculas nos passos dos modelos; nao e resultado. A camada translucida alem da ultima cadeia de cada fibrila e construida (ver o docstring do script).",
+ "image_px": {
+  "width": 2400,
+  "height": 1800
+ },
+ "renders": {
+  "a2_ago2_guide_target": {
+   "pdb_id": "6N4O",
+   "crop_px": [
+    1525,
+    1249
+   ],
+   "guide_chain": "C",
+   "target_chain": "D",
+   "seed": "guide nucleotides 2-8"
+  },
+  "a2_bace1_inhibitor": {
+   "pdb_id": "4D8C",
+   "crop_px": [
+    1337,
+    1623
+   ],
+   "chain": "A",
+   "catalytic_dyad_resi": {
+    "DTGS": 32,
+    "DSGT": 217
+   }
+  },
+  "a2_abeta42_fibril_end": {
+   "pdb_id": "5OQV",
+   "crop_px": [
+    1592,
+    888
+   ],
+   "layer_transformation": [
+    {
+     "protofilament": 1,
+     "previous_chain": "H",
+     "last_chain": "F",
+     "ca_pairs": 42,
+     "rms_ca_angstrom": 0.0,
+     "rise_angstrom": 4.7,
+     "rotation_deg": 1.46,
+     "chains_along_axis": [
+      "E",
+      "C",
+      "A",
+      "H",
+      "F"
+     ]
+    },
+    {
+     "protofilament": 2,
+     "previous_chain": "I",
+     "last_chain": "G",
+     "ca_pairs": 42,
+     "rms_ca_angstrom": 0.0,
+     "rise_angstrom": 4.7,
+     "rotation_deg": 1.46,
+     "chains_along_axis": [
+      "D",
+      "B",
+      "I",
+      "G"
+     ]
+    }
+   ]
+  },
+  "a2_abeta42_fibril_axis": {
+   "pdb_id": "5OQV",
+   "crop_px": [
+    1665,
+    1288
+   ]
+  },
+  "a2_asyn_fibril_end": {
+   "pdb_id": "6CU7",
+   "crop_px": [
+    1660,
+    672
+   ],
+   "layer_transformation": [
+    {
+     "protofilament": 1,
+     "previous_chain": "G",
+     "last_chain": "I",
+     "ca_pairs": 60,
+     "rms_ca_angstrom": 0.0,
+     "rise_angstrom": 4.74,
+     "rotation_deg": 1.23,
+     "chains_along_axis": [
+      "A",
+      "C",
+      "E",
+      "G",
+      "I"
+     ]
+    },
+    {
+     "protofilament": 2,
+     "previous_chain": "H",
+     "last_chain": "J",
+     "ca_pairs": 60,
+     "rms_ca_angstrom": 0.0,
+     "rise_angstrom": 4.85,
+     "rotation_deg": 1.21,
+     "chains_along_axis": [
+      "B",
+      "D",
+      "F",
+      "H",
+      "J"
+     ]
+    }
+   ]
+  },
+  "a2_asyn_fibril_axis": {
+   "pdb_id": "6CU7",
+   "crop_px": [
+    1744,
+    1447
+   ]
+  }
+ }
+}

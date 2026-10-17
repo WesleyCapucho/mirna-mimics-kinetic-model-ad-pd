@@ -1,0 +1,9 @@
+# Changelog
+
+🇧🇷 Versão em português: [CHANGELOG.pt-BR.md](CHANGELOG.pt-BR.md)
+
+Each release is archived on Zenodo and carries its own DOI.
+
+## 1.0.0 (unreleased)
+
+First version of this repository. The mechanistic scripts (`scripts/12`, `13`, `17` to `20` and `36` to `40`), their helpers, the parameter table, the raw kinetic and structure files, the result tables and the figures were moved here from the companion repository (10.5281/zenodo.23438256), where they were archived up to its version 1.2.1. They were copied unchanged except for two docstrings that cited scripts of the companion repository, and `scripts/08` was reduced to the checks of this study (783 checks). `scripts/46` is new: it ranks the nine mimic series by the longest dosing interval within 3, 10 or 30 times the baseline pool, at every anchor of the repression strength, and records whether first place depends on those choices; `scripts/08` recomputes the ranking. `scripts/47` draws the figure of the ranking, with the renders of the targets above the plots of the longest dosing interval over the scan of the repression strength (main-text figure; the nine-panel design-space map moves to the supplement). Two defects of the figures inherited from the companion repository were fixed: the lettering of seven figures was below the 4.5:1 contrast that the journal asks for (lowest 2.26:1), and the renders were embedded at 100 dpi in the PDF and EPS files (600 dpi in the PNG), because the vector backends resample an image to the figure resolution. `scripts/45` measures both on the vector files and `scripts/08` keeps them in check (966 checks).

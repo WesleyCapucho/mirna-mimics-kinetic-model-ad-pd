@@ -1,0 +1,51 @@
+{
+ "criterion_en": "Longest dosing interval at which the repressor peak needed to hold the cycle-averaged protein down by the target stays within T times the baseline pool, for T = 3, 10 and 30 and at each anchor of the repression strength; primary reading T = 10 at the midpoint of the scan. Ranked among measured species; the series 'median miRNA' is a reference and is ranked apart.",
+ "criterion_pt": "Maior intervalo de dose em que o pico do repressor necessario para manter a proteina media do ciclo abaixo pelo alvo fica ate T vezes o reservatorio basal, para T = 3, 10 e 30 e em cada ancora da forca de repressao; leitura primaria T = 10 no ponto medio da varredura. Ordenado entre especies medidas; a serie 'median miRNA' e uma referencia e e ordenada a parte.",
+ "primary": {
+  "threshold": 10,
+  "anchor": "scan midpoint"
+ },
+ "thresholds": [
+  3,
+  10,
+  30
+ ],
+ "reference_series": "median miRNA",
+ "featured_by_axis": {
+  "AD": {
+   "species": [
+    "miR-29c"
+   ],
+   "first_place_in_every_combination": [
+    "miR-29c"
+   ],
+   "n_combinations": 9,
+   "n_ties_for_first": 0,
+   "first_place_changes": false
+  },
+  "PD": {
+   "species": [
+    "miR-7 upper bound"
+   ],
+   "first_place_in_every_combination": [
+    "miR-7 upper bound"
+   ],
+   "n_combinations": 24,
+   "n_ties_for_first": 1,
+   "first_place_changes": false
+  }
+ },
+ "combinations_with_a_tie": [
+  [
+   "PD",
+   0.43,
+   "K065 floor",
+   3
+  ]
+ ],
+ "reference_at_least_as_long_as_first_place": {
+  "n": 33,
+  "of": 33
+ },
+ "source": "results/tables/mimic_design_space.json"
+}

@@ -1,0 +1,23 @@
+{
+ "ad_monomer_accumulation": {
+  "t_end_hours": 2000.0,
+  "ratio_AD_over_control": 1.4125598422979426,
+  "source": "ode_calibrated_results.json:ad_clearance_vs_production"
+ },
+ "mimic_washout": {
+  "fast_species": "miR-7 (1.7 h, K020)",
+  "slow_species": "median miRNA (34 h, K016)",
+  "fast_hours_to_baseline": 11.036140401169058,
+  "slow_hours_to_baseline": 220.72280802338116,
+  "source": "ode_calibrated_results.json:mimic_washout"
+ },
+ "dosing_sawtooth": {
+  "dosing_interval_hours": 24.0,
+  "fast_species": "miR-7",
+  "slow_species": "median miRNA",
+  "peak_over_average_fast": 9.78616652059499,
+  "peak_over_average_slow": 1.2645108951287527,
+  "penalty_ratio": 7.739092291172835,
+  "source": "mimic_dosing_feasibility.json:daily_dosing_comparison"
+ }
+}

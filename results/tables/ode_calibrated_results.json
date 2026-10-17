@@ -1,0 +1,289 @@
+{
+ "generated_on": "2026-10-14",
+ "measured_parameter_source": "data/extracted/kinetic_parameters.csv",
+ "free_parameters": {
+  "k_repress": {
+   "low": 0.1,
+   "high": 3.0,
+   "why_en": "Strength of miRNA repression per unit miRNA. Not measured as a rate anywhere in the table.",
+   "why_pt": "Forca da repressao por unidade de miRNA. Nao medida como taxa em nenhum ponto da tabela."
+  },
+  "k_translate": {
+   "low": 0.2,
+   "high": 5.0,
+   "why_en": "Protein output per unit mRNA per hour.",
+   "why_pt": "Producao de proteina por unidade de mRNA por hora."
+  }
+ },
+ "illustrative_constants": {
+  "kn_Ab": {
+   "value": 1e-06,
+   "why_en": "Abeta42 primary nucleation. Not separable from k+ with the published data (K037).",
+   "why_pt": "Nucleacao primaria do Abeta42. Nao separavel de k+ com os dados publicados (K037)."
+  },
+  "k2_Ab": {
+   "value": 0.0001,
+   "why_en": "Abeta42 secondary nucleation. Not separable (K037).",
+   "why_pt": "Nucleacao secundaria do Abeta42. Nao separavel (K037)."
+  },
+  "kplus_Ab": {
+   "value": 0.001,
+   "why_en": "Abeta42 elongation. Not separable (K037); the alpha-synuclein value must not be borrowed.",
+   "why_pt": "Alongamento do Abeta42. Nao separavel (K037); o valor da alfa-sinucleina nao pode ser emprestado."
+  },
+  "kn_aSyn": {
+   "value": 1e-08,
+   "why_en": "alpha-synuclein primary nucleation at acidic pH. Only qualitative in the source (K042).",
+   "why_pt": "Nucleacao primaria da alfa-sinucleina em pH acido. So qualitativa na fonte (K042)."
+  },
+  "k2_aSyn": {
+   "value": 1e-06,
+   "why_en": "alpha-synuclein secondary nucleation at acidic pH. Only qualitative in the source (K042).",
+   "why_pt": "Nucleacao secundaria da alfa-sinucleina em pH acido. So qualitativa na fonte (K042)."
+  }
+ },
+ "ad_clearance_vs_production": {
+  "abeta_control": 14.03677025074362,
+  "abeta_AD": 19.827777956633657,
+  "abeta_ratio_AD_over_control": 1.4125598412201161,
+  "clearance_deficit_percent": 30.263157894736846,
+  "production_difference_percent": 1.4925373134328401,
+  "required_bace1_knockdown": 0.29206539074960136,
+  "mimic_fold_needed": 1.4240000464913316,
+  "mimic_fold_needed_range": [
+   1.4146485282643388,
+   1.4752204212897777
+  ],
+  "mimic_fold_ode_check_max_relative_error": 3.1214630880072036e-10
+ },
+ "mimic_washout": {
+  "miR-7 (1.7 h, K020)": {
+   "decay_constant_per_hour": 0.407734,
+   "half_life_hours": 1.6999984807740962,
+   "hours_to_return_to_baseline": 11.036140401169058,
+   "days_to_return_to_baseline": 0.4598391833820441
+  },
+  "miR-7 upper bound (5 h, K021)": {
+   "decay_constant_per_hour": 0.138629,
+   "half_life_hours": 5.00001572946458,
+   "hours_to_return_to_baseline": 32.45936759502171,
+   "days_to_return_to_baseline": 1.3524736497925713
+  },
+  "miR-29b (7 h, K017)": {
+   "decay_constant_per_hour": 0.099021,
+   "half_life_hours": 7.000001823451039,
+   "hours_to_return_to_baseline": 45.442983511883995,
+   "days_to_return_to_baseline": 1.8934576463284998
+  },
+  "miR-29c (10.6 h, K018)": {
+   "decay_constant_per_hour": 0.0653912,
+   "half_life_hours": 10.6000070431487,
+   "hours_to_return_to_baseline": 68.81368854418126,
+   "days_to_return_to_baseline": 2.867237022674219
+  },
+  "median miRNA (34 h, K016)": {
+   "decay_constant_per_hour": 0.0203867,
+   "half_life_hours": 33.99996961548192,
+   "hours_to_return_to_baseline": 220.72280802338116,
+   "days_to_return_to_baseline": 9.196783667640881
+  }
+ },
+ "alpha_synuclein_ph_gate": {
+  "fibril_number_neutral_pH": 0.001,
+  "fibril_number_acidic_pH": 2.8931879361042636,
+  "fold_difference_at_illustrative_values": 2893.1879361042634,
+  "fibril_mass_neutral_pH": 16.051635569232513,
+  "fibril_mass_acidic_pH": 1442.26332817374,
+  "neutral_stays_at_seed": true,
+  "acidic_above_neutral_in_every_k2": true,
+  "fold_range_over_k2_sweep": [
+   534.7910686378079,
+   13764.298057967892
+  ],
+  "k2_sweep": [
+   {
+    "k2_aSyn": 1e-08,
+    "fold": 534.7910686378079
+   },
+   {
+    "k2_aSyn": 3.162277660168379e-08,
+    "fold": 839.1969774118959
+   },
+   {
+    "k2_aSyn": 1e-07,
+    "fold": 1285.3264259607638
+   },
+   {
+    "k2_aSyn": 3.162277660168379e-07,
+    "fold": 1938.0163151066306
+   },
+   {
+    "k2_aSyn": 1e-06,
+    "fold": 2893.1879361042634
+   },
+   {
+    "k2_aSyn": 3.162277660168379e-06,
+    "fold": 4292.23754287492
+   },
+   {
+    "k2_aSyn": 9.999999999999999e-06,
+    "fold": 6343.076553772416
+   },
+   {
+    "k2_aSyn": 3.1622776601683795e-05,
+    "fold": 9351.03534453805
+   },
+   {
+    "k2_aSyn": 0.0001,
+    "fold": 13764.298057967892
+   }
+  ],
+  "reading_en": "Direction sourced (K011, K042); magnitude set by illustrative constants.",
+  "reading_pt": "Direcao com fonte (K011, K042); magnitude fixada por constantes ilustrativas."
+ },
+ "human_abeta_aggregate_load": {
+  "control median [K032]": {
+   "load_nM": 20.0,
+   "multiples_of_M_star": 2.0,
+   "above_M_star": true
+  },
+  "control lower quartile [K031]": {
+   "load_nM": 2.0,
+   "multiples_of_M_star": 0.2,
+   "above_M_star": false
+  },
+  "AD median [K035]": {
+   "load_nM": 2000.0000000000002,
+   "multiples_of_M_star": 200.00000000000003,
+   "above_M_star": true
+  },
+  "AD upper quartile [K036]": {
+   "load_nM": 3000.0,
+   "multiples_of_M_star": 300.0,
+   "above_M_star": true
+  },
+  "M_star_nM [K014]": 10.0,
+  "AD_over_control_median_fold": 100.00000000000001
+ },
+ "mimic_dose_vs_measured_knockdown": {
+  "required_BACE1_knockdown": 0.29206539074960136,
+  "d_mRNA_BACE1_measured": 0.04556472,
+  "measured_BACE1_knockdown_K047": 0.5,
+  "required_over_measured_knockdown": 0.5841307814992027,
+  "required_knockdown_below_measured": true,
+  "k_repress_values": 81,
+  "mimic_fold_to_offset_clearance": [
+   1.4146485282643388,
+   1.4752204212897777
+  ],
+  "mimic_fold_to_reproduce_measured_knockdown": [
+   2.005062746666667,
+   2.1518824
+  ],
+  "reading_en": "The comparison is between a modelled dose and a measured effect in a cell line, not a prediction of what a mimic would do in a human brain. It says only whether the intervention the model asks for is larger or smaller than one already shown to be achievable. The transfected miRNA level in the cell experiment is not reported as a fold over baseline, so the 50% constrains the product of repression strength and dose, not either alone.",
+  "reading_pt": "A comparacao e entre uma dose modelada e um efeito medido em linhagem celular, nao uma predicao do que um mimetico faria num cerebro humano. Ela diz apenas se a intervencao que o modelo pede e maior ou menor que uma ja demonstrada como alcancavel. O nivel de miRNA transfectado no experimento celular nao e reportado como razao sobre o basal, entao os 50% restringem o produto da forca de repressao pela dose, e nenhum dos dois sozinho."
+ },
+ "alpha_synuclein_saturation": {
+  "alpha_synuclein_uM_in_bouton": 21.565,
+  "points": [
+   {
+    "m_half_source": "K009 (pH 7.4, 45 C): 49.8 uM",
+    "m_half_uM": 49.8,
+    "concentration_over_m_half": 0.43303212851405626,
+    "fraction_of_maximal_elongation_rate": 0.3021789392559378,
+    "percent_rate_change_per_percent_concentration_change": 0.6978210607440622
+   },
+   {
+    "m_half_source": "K010 (pH 7.4, 37 C): 46 uM",
+    "m_half_uM": 46.0,
+    "concentration_over_m_half": 0.468804347826087,
+    "fraction_of_maximal_elongation_rate": 0.3191741286168875,
+    "percent_rate_change_per_percent_concentration_change": 0.6808258713831126
+   }
+  ],
+  "below_half_saturation": true,
+  "fraction_of_maximal_range": [
+   0.3021789392559378,
+   0.3191741286168875
+  ],
+  "elasticity_range": [
+   0.6808258713831126,
+   0.6978210607440622
+  ],
+  "reading_en": "Physiological alpha-synuclein sits below half-saturation, on the rising part of the elongation curve, so lowering it lowers elongation almost in proportion. That is what makes a miR-7 mimic a coherent idea at all. The saturation constant is from recombinant protein in vitro and the concentration from rat synaptosomes, so this is a statement about regime, not a predicted rate.",
+  "reading_pt": "A alfa-sinucleina fisiologica fica abaixo da meia-saturacao, na parte ascendente da curva de elongacao, entao baixa-la reduz a elongacao quase em proporcao. E o que torna um mimetico de miR-7 uma ideia coerente. A constante de saturacao vem de proteina recombinante in vitro e a concentracao de sinaptossomo de rato, entao isto fala de regime, nao de taxa predita."
+ },
+ "enzyme_substrate_stoichiometry": {
+  "BACE1_copies_per_bouton": 115.84,
+  "APP_copies_per_bouton": 6283.6,
+  "APP_per_BACE1": 54.24378453038674,
+  "reading_en": "The enzyme is outnumbered by its substrate about fifty to one in the presynaptic bouton, which is the arrangement in which the enzyme's own abundance sets the flux. That is the arrangement a miR-29 mimic would act on. Rat synaptosomes; no human equivalent is in this table.",
+  "reading_pt": "A enzima e superada pelo substrato em cerca de cinquenta para um no botao presinaptico, que e o arranjo em que a abundancia da propria enzima fixa o fluxo. E o arranjo sobre o qual um mimetico de miR-29 agiria. Sinaptossomos de rato; nao ha equivalente humano nesta tabela."
+ },
+ "mir7_knockdown_to_elongation": {
+  "alpha_synuclein_uM_in_bouton": 21.565,
+  "cases": [
+   {
+    "knockdown_source": "miR-7 alone, SNCA construct with 3'UTR [K058]",
+    "knockdown": 0.3,
+    "m_half_source": "K009: 49.8 uM",
+    "m_half_uM": 49.8,
+    "alpha_synuclein_after_uM": 15.0955,
+    "elongation_rate_reduction": 0.2302162707737826,
+    "reduction_over_knockdown": 0.767387569245942
+   },
+   {
+    "knockdown_source": "miR-7 alone, SNCA construct with 3'UTR [K058]",
+    "knockdown": 0.3,
+    "m_half_source": "K010: 46 uM",
+    "m_half_uM": 46.0,
+    "alpha_synuclein_after_uM": 15.0955,
+    "elongation_rate_reduction": 0.22587588283916182,
+    "reduction_over_knockdown": 0.7529196094638728
+   },
+   {
+    "knockdown_source": "miR-7 + miR-153, cortical neurons [K063]",
+    "knockdown": 0.43,
+    "m_half_source": "K009: 49.8 uM",
+    "m_half_uM": 49.8,
+    "alpha_synuclein_after_uM": 12.292050000000001,
+    "elongation_rate_reduction": 0.3448750685474228,
+    "reduction_over_knockdown": 0.8020350431335413
+   },
+   {
+    "knockdown_source": "miR-7 + miR-153, cortical neurons [K063]",
+    "knockdown": 0.43,
+    "m_half_source": "K010: 46 uM",
+    "m_half_uM": 46.0,
+    "alpha_synuclein_after_uM": 12.292050000000001,
+    "elongation_rate_reduction": 0.33932586004438003,
+    "reduction_over_knockdown": 0.7891299070799536
+   }
+  ],
+  "elongation_rate_reduction_range": [
+   0.22587588283916182,
+   0.3448750685474228
+  ],
+  "less_than_proportional_everywhere": true,
+  "additivity": {
+   "miR7_alone": 0.3,
+   "miR153_alone": 0.19,
+   "pair_measured": 0.46,
+   "pair_if_independent": 0.43300000000000005,
+   "excess_over_independent": 0.02699999999999997,
+   "reading_en": "Independent action predicts the pair almost exactly, so the data do not require synergy between the two miRNAs at the protein level.",
+   "reading_pt": "Acao independente preve o par quase exatamente, entao os dados nao exigem sinergia entre os dois miRNAs no nivel da proteina."
+  },
+  "reading_en": "Three systems in one chain: a knockdown measured in a cell line and in rat cortical neurons, a concentration measured in rat synaptosomes, and a saturation curve measured on recombinant protein in vitro. The chain is arithmetic on measured numbers with no free parameter anywhere, but it is not a prediction for a human brain, and each step carries the system it came from.",
+  "reading_pt": "Tres sistemas numa cadeia so: uma queda medida em linhagem celular e em neuronios corticais de rato, uma concentracao medida em sinaptossomos de rato e uma curva de saturacao medida em proteina recombinante in vitro. A cadeia e aritmetica sobre numeros medidos, sem nenhum parametro livre, mas nao e predicao para cerebro humano, e cada passo carrega o sistema de onde veio."
+ },
+ "free_parameter_sensitivity_aggregation_block_excluded": true,
+ "free_parameter_sensitivity_scans": 18,
+ "free_parameter_sensitivity_ad_above_control": 18,
+ "free_parameter_sensitivity_flips": 0,
+ "free_parameter_sensitivity_not_evaluable": 0,
+ "abeta_ratio_min": 1.4125598412201161,
+ "abeta_ratio_max": 1.4125598436792488,
+ "abeta_ratio_note_en": "The AD/control monomer ratio is analytically (k_prod_AD/k_clear_AD)/(k_prod_ctrl/k_clear_ctrl) and is therefore independent of every free parameter. The scan confirms this numerically rather than discovering it.",
+ "abeta_ratio_note_pt": "O ratio de monomero AD/controle e analiticamente (k_prod_AD/k_clear_AD)/(k_prod_ctrl/k_clear_ctrl) e, portanto, independente de todo parametro livre. A varredura confirma isso numericamente, em vez de descobrir."
+}

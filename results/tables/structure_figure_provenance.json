@@ -1,0 +1,100 @@
+{
+ "6N4O": {
+  "pdb_id": "6N4O",
+  "file": "6N4O.pdb",
+  "title": "HUMAN ARGONAUTE2-MIR-122 BOUND TO A SEED AND SUPPLEMENTARY PAIRED TARGET",
+  "method": "X-RAY DIFFRACTION",
+  "resolution_angstrom": 2.9,
+  "doi": "10.15252/embj.2018101153",
+  "pmid": "31268608",
+  "role_en": "How a microRNA recognises its target at all: the guide is held by Argonaute2 and the seed pairs with the target. Common to both axes.",
+  "role_pt": "Como um microRNA reconhece o alvo: o guia e segurado pelo Argonauta2 e a semente pareia com o alvo. Comum aos dois eixos."
+ },
+ "4D8C": {
+  "pdb_id": "4D8C",
+  "file": "4D8C.cif",
+  "title": "Crystal Structure of Human Beta Secretase in Complex with NVP-BXD552, derived from a co-crystallization experiment",
+  "method": "X-RAY DIFFRACTION",
+  "resolution_angstrom": 2.07,
+  "doi": "10.1021/jm300069y",
+  "pmid": "22380629",
+  "role_en": "BACE1, the enzyme the miR-29 family represses, with an inhibitor bound in the active site.",
+  "role_pt": "BACE1, a enzima que a familia miR-29 reprime, com inibidor ligado no sitio ativo.",
+  "catalytic_dyad_resi_in_this_deposition": {
+   "DTGS": 32,
+   "DSGT": 217
+  },
+  "catalytic_dyad_check": "aspartates of DTGS and DSGT motifs == aspartates within 5 A of the inhibitor"
+ },
+ "6CU7": {
+  "pdb_id": "6CU7",
+  "file": "6CU7.cif",
+  "title": "Alpha Synuclein fibril formed by full length protein - Rod Polymorph",
+  "method": "ELECTRON MICROSCOPY",
+  "resolution_angstrom": 3.5,
+  "resolution_method": "FSC 0.5 CUT-OFF",
+  "doi": "10.1038/s41467-018-05971-2",
+  "pmid": "30190461",
+  "role_en": "The aggregated end state of the miR-7/SNCA axis.",
+  "role_pt": "O estado agregado final do eixo miR-7/SNCA.",
+  "note_en": "The deposition reports 3.5 A (FSC 0.5 cut-off); the article abstract reports 3.7 A for both polymorphs. Quote the criterion with the number.",
+  "note_pt": "O deposito informa 3,5 A (corte FSC 0,5); o resumo do artigo informa 3,7 A para os dois polimorfos. Citar o criterio junto com o numero.",
+  "chain_split": {
+   "n_chains": 10,
+   "protofilament_1": [
+    "A",
+    "C",
+    "E",
+    "G",
+    "I"
+   ],
+   "protofilament_2": [
+    "B",
+    "D",
+    "F",
+    "H",
+    "J"
+   ],
+   "layer_spacing_angstrom": [
+    4.76,
+    4.89
+   ],
+   "closest_interprotofilament_centroids_angstrom": 38.83,
+   "assignment": "connected components of chains with CA-centroid distance < 6.0 A"
+  }
+ },
+ "5OQV": {
+  "pdb_id": "5OQV",
+  "file": "5OQV.cif",
+  "title": "Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM",
+  "method": "ELECTRON MICROSCOPY",
+  "resolution_angstrom": 4.0,
+  "resolution_method": "FSC 0.143 CUT-OFF",
+  "doi": "10.1126/science.aao2825",
+  "pmid": "28882996",
+  "role_en": "The aggregated end state of the miR-29/BACE1/Abeta axis.",
+  "role_pt": "O estado agregado final do eixo miR-29/BACE1/Abeta.",
+  "chain_split": {
+   "n_chains": 9,
+   "protofilament_1": [
+    "A",
+    "C",
+    "E",
+    "F",
+    "H"
+   ],
+   "protofilament_2": [
+    "B",
+    "D",
+    "G",
+    "I"
+   ],
+   "layer_spacing_angstrom": [
+    4.69,
+    4.71
+   ],
+   "closest_interprotofilament_centroids_angstrom": 31.55,
+   "assignment": "connected components of chains with CA-centroid distance < 6.0 A"
+  }
+ }
+}

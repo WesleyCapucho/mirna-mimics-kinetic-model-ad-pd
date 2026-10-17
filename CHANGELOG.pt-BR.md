@@ -1,0 +1,9 @@
+# Registro de mudanças
+
+🇬🇧 English version: [CHANGELOG.md](CHANGELOG.md)
+
+Cada versão é arquivada no Zenodo e tem DOI próprio.
+
+## 1.0.0 (não lançada)
+
+Primeira versão deste repositório. Os scripts mecanísticos (`scripts/12`, `13`, `17` a `20` e `36` a `40`), seus módulos de apoio, a tabela de parâmetros, os arquivos brutos de cinética e de estrutura, as tabelas de resultados e as figuras vieram do repositório companheiro (10.5281/zenodo.23438256), onde foram arquivados até a versão 1.2.1 dele. Foram copiados sem alteração, salvo dois docstrings que citavam scripts do repositório companheiro, e o `scripts/08` foi reduzido às verificações deste estudo (783 verificações). O `scripts/46` é novo: ordena as nove séries de mimético pelo maior intervalo de dose dentro de 3, 10 ou 30 vezes o reservatório basal, em cada âncora da força de repressão, e registra se o primeiro lugar depende dessas escolhas; o `scripts/08` recalcula a ordenação. O `scripts/47` desenha a figura da ordenação, com os renders dos alvos acima dos gráficos do maior intervalo de dose sobre a varredura da força de repressão (figura do texto principal; o mapa de espaço de projeto de nove painéis passa ao suplemento). Dois defeitos das figuras herdados do repositório companheiro foram corrigidos: o texto de sete figuras estava abaixo do contraste de 4,5:1 que a revista pede (o menor, 2,26:1), e os renders estavam embutidos a 100 dpi nos arquivos PDF e EPS (600 dpi no PNG), porque os backends vetoriais reamostram uma imagem para a resolução da figura. O `scripts/45` mede os dois nos arquivos vetoriais e o `scripts/08` os mantém sob controle (966 verificações).

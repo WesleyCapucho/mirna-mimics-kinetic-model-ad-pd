@@ -1,0 +1,16 @@
+# EN | Mechanistic study: ODE models, design space and figures (scripts 12, 17, 36-40 and the figure scripts)
+# PT | Estudo mecanistico: modelos EDO, espaco de projeto e figuras
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+pillow>=10.0
+xlrd>=2.0          # EN/PT: reads the archived .xls in data/raw/kinetics_2026 (scripts/08)
+openpyxl>=3.1      # EN/PT: reads the archived .xlsx (Wilhelm et al. 2014)
+
+# EN | Structure figures (scripts/13, 39) | PT | Figuras estruturais
+# pymol-open-source>=3.0  (install separately: pip install pymol-open-source)
+
+# EN | Optional: lettering-contrast check of the figure PDFs (scripts/45)
+# PT | Opcional: conferencia de contraste do texto dos PDFs de figura (scripts/45)
+pymupdf>=1.24

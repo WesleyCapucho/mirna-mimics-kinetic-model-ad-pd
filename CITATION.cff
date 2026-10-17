@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Kinetic model of microRNA mimics in Alzheimer's disease and Parkinson's disease: data, code and results"
+type: dataset
+license: CC-BY-4.0
+version: "1.0.0"
+authors:
+  - family-names: Capucho
+    given-names: Wesley Felipe
+    orcid: "https://orcid.org/0009-0008-2495-8092"
+    affiliation: "Universidade Federal de São Paulo (UNIFESP), Instituto de Saúde e Sociedade, Campus Baixada Santista, Santos, SP, Brazil"
+repository-code: "https://github.com/WesleyCapucho/mirna-mimics-kinetic-model-ad-pd"
+references:
+  - type: dataset
+    title: "Diagnostic accuracy of circulating microRNAs in Alzheimer's disease and Parkinson's disease: data, code and results"
+    version: "1.2.1"
+    doi: "10.5281/zenodo.23438256"
+    authors:
+      - family-names: Capucho
+        given-names: Wesley Felipe
+    notes: "Companion repository: systematic review and meta-analysis. The mechanistic scripts of this repository were first archived there."
+keywords:
+  - microRNA
+  - microRNA mimic
+  - Alzheimer's disease
+  - Parkinson's disease
+  - kinetic model

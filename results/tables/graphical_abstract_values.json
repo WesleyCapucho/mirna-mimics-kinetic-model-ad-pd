@@ -1,0 +1,104 @@
+{
+ "ago2_structure": {
+  "pdb_id": "6N4O",
+  "guide": "miR-122",
+  "doi": "10.15252/embj.2018101153"
+ },
+ "ad_axis": {
+  "mir29_half_lives": {
+   "b_written": "7 h",
+   "c_written": "10.6 h",
+   "source": [
+    "K017",
+    "K018"
+   ],
+   "citation": "Zhang 2011"
+  },
+  "bace1_app_ratio": {
+   "bace1_copies": 115.84,
+   "app_copies": 6283.6,
+   "ratio": 54.24378453038674,
+   "source": [
+    "K055",
+    "K056"
+   ],
+   "citation": "Wilhelm 2014"
+  },
+  "abeta_production": {
+   "control_written": "6.7 %/hour",
+   "ad_written": "6.6 %/hour",
+   "source": [
+    "K001",
+    "K002"
+   ],
+   "citation": "Mawuenyega 2010"
+  },
+  "clearance_deficit_percent": {
+   "value": 30.263157894736846,
+   "source": "ad_clearance_vs_production"
+  },
+  "monomer_ratio": {
+   "value": 1.4125598412201161,
+   "source": "ad_clearance_vs_production"
+  },
+  "required_knockdown_percent": {
+   "value": 29.206539074960137,
+   "measured": 50.0,
+   "source": [
+    "mimic_dose_vs_measured_knockdown",
+    "K047"
+   ],
+   "citation": "Hebert 2008"
+  }
+ },
+ "pd_axis": {
+  "mir7_half_life": {
+   "written": "1.7 h",
+   "median_written": "34 h",
+   "source": [
+    "K020",
+    "K016"
+   ],
+   "citation": "Kingston 2019"
+  },
+  "alpha_synuclein_concentration": {
+   "uM": 21.565,
+   "source": [
+    "K054"
+   ],
+   "citation": "Wilhelm 2014"
+  },
+  "saturation_regime_percent": {
+   "low": 30.21789392559378,
+   "high": 31.91741286168875,
+   "m_half_low": 46.0,
+   "m_half_high": 49.8,
+   "source": [
+    "alpha_synuclein_saturation",
+    "K009",
+    "K010"
+   ],
+   "citation": "Buell 2014"
+  },
+  "measured_knockdown_percent": {
+   "low_written": "30 %",
+   "high_written": "43 %",
+   "source": [
+    "K058",
+    "K063"
+   ],
+   "citation": "Doxakis 2010"
+  },
+  "elongation_slowdown_percent": {
+   "low": 22.587588283916183,
+   "high": 34.48750685474228,
+   "source": "mir7_knockdown_to_elongation"
+  },
+  "dosing_penalty": {
+   "fold": 7.7391,
+   "stabilisation_fold": 20.0,
+   "half_life_h": 1.7,
+   "source": "mimic_dosing_feasibility.json"
+  }
+ }
+}
